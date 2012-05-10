@@ -2,7 +2,7 @@
  * Model and Control for dpl button
  * @author dxq613@gmail.com
  */
-KISSY.add("js/buttongroup",function(S,Button,UIBase,Component,GroupRender){
+KISSY.add("bootstrap/buttongroup",function(S,Button,UIBase,Component,GroupRender){
 
 	/**
      * @name DPL.ButtonGroup

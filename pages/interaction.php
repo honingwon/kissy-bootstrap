@@ -4,7 +4,7 @@
       ================================================== -->
 <header id="overview">
 	<h1>交互组件</h1>
-	<p class="lead">CRM DPL基于Bootstrap的组件，提供了多种组件。</p>
+	<p class="lead">DPL基于Bootstrap的组件，提供了多种组件。</p>
 	<div class="subnav">
 		<ul class="nav nav-pills">
 			<li><a href="#button">按钮</a></li>

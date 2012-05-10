@@ -1,4 +1,4 @@
-﻿KISSY.add(function(S,O){
+﻿KISSY.add('bootstrap/overlayimage',function(S,O){
 	var CLS_ITEM = 'thumbnail';
 	/**
      * @name DPL.OverlayImage

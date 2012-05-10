@@ -2,7 +2,7 @@
  * Model and Control for dpl button group render
  * @author dxq613@gmail.com
  */
-KISSY.add(function(S,UIBase,Component){
+KISSY.add('bootstrap/grouprender',function(S,UIBase,Component){
 
 	/**
      * @name DPL.ButtonGroupRender

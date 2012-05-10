@@ -4,7 +4,7 @@
       ================================================== -->
 <header id="overview">
 	<h1>DPL 插件</h1>
-	<p class="lead">CRM DPL基于Bootstrap的组件，提供各组件的JS插件。</p>
+	<p class="lead">DPL基于Bootstrap的组件，提供各组件的JS插件。</p>
 	<div class="subnav">
 		<ul class="nav nav-pills">
 			<li><a href="#button">按钮</a></li>
@@ -21,9 +21,9 @@
 <script>
 	KISSY.config({
 		packages:[{
-			name:"js",
+			name:"bootstrap",
 			tag:"201204271014",
-			path:"./assets/"
+			path:"./assets/js/"
 		}]
 	});
 </script>

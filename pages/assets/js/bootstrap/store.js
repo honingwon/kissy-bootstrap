@@ -1,4 +1,4 @@
-KISSY.add(function(S){
+KISSY.add('bootstrap/store',function(S){
 	/**
 	* 数据缓冲类，缓存数据在浏览器中
 	* @name Store

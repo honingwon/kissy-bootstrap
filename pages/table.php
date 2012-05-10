@@ -4,7 +4,7 @@
       ================================================== -->
 <header id="overview">
 	<h1>表格</h1>
-	<p class="lead">CRM DPL基于Bootstrap的组件，提供各种样式的表格。</p>
+	<p class="lead">DPL基于Bootstrap的组件，提供各种样式的表格。</p>
 	<div class="subnav">
 		<ul class="nav nav-pills">
 			

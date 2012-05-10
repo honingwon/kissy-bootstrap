@@ -255,7 +255,7 @@ mb1.on('click',function(event){
 	</div>
 	<script>
 			
-			KISSY.use('button,js/buttongroup',function(S,Button,ButtonGroup){
+			KISSY.use('button,bootstrap/buttongroup',function(S,Button,ButtonGroup){
 				var primaryButton = new Button({
 					srcNode:'#primary'
 				});

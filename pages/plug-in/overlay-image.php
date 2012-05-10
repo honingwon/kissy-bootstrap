@@ -52,7 +52,7 @@
 &lt;/ul&gt;
       </pre>
 			<pre class="prettyprint linenums">
-KISSY.use('js/overlayimage',function(S,OverlayImage){
+KISSY.use('bootstrap/overlayimage',function(S,OverlayImage){
 	new OverlayImage({
 		srcNode : '#J_OI'
 	});
@@ -61,7 +61,7 @@ KISSY.use('js/overlayimage',function(S,OverlayImage){
 		</div>
 	</div>
 	<script>
-		KISSY.use('js/overlayimage',function(S,OverlayImage){
+		KISSY.use('bootstrap/overlayimage',function(S,OverlayImage){
 			new OverlayImage({
 				srcNode : '#J_OI'
 			});

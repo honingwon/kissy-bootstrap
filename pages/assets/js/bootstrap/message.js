@@ -1,4 +1,4 @@
-KISSY.add(function(S){
+KISSY.add('bootstrap/message',function(S){
 	/**
      * @name DPL.Message
      * @constructor

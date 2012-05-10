@@ -4,7 +4,7 @@
       ================================================== -->
 <header id="overview">
 	<h1>表单</h1>
-	<p class="lead">CRM DPL基于Bootstrap的组件，提供各种布局的表单。</p>
+	<p class="lead">DPL基于Bootstrap的组件，提供各种布局的表单。</p>
 	<div class="subnav">
 		<ul class="nav nav-pills">
 			<li><a href="#layout">表单布局</a></li>

@@ -2,7 +2,7 @@
 	工具栏、状态栏
 	create by dxq 2011-10-12
 */
-KISSY.add(function(S){
+KISSY.add('bootstrap/bar',function(S){
 	var DOM = S.DOM,
 		Node = S.Node;
 

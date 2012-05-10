@@ -19,7 +19,7 @@
 &lt;div id="J_PageBar"&gt;&lt;/div&gt;        
        </pre>
         <pre class="prettyprint linenums">
- KISSY.use('js/store,js/bar',function(S,Store,Bar){
+ KISSY.use('bootstrap/store,bootstrap/bar',function(S,Store,Bar){
   //数据缓存对象
   var store = new Store({
     url : 'plug-in/page-data.php'
@@ -42,7 +42,7 @@
     </div>
   </div>
 	<script>
-		KISSY.use('js/store,js/bar',function(S,Store,Bar){
+		KISSY.use('bootstrap/store,bootstrap/bar',function(S,Store,Bar){
 			//数据缓存对象
 			var store = new Store({
 				url : 'plug-in/page-data.php'

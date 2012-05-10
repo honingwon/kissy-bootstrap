@@ -27,7 +27,7 @@
         &lt;/div&gt;
       </pre>
       <pre class="prettyprint linenums">
-        KISSY.use('js/message',function(S,Message){
+        KISSY.use('bootstrap/message',function(S,Message){
           var msg = new Message({srcNode : '#J_Msg'});
           //显示
           S.one('#J_Btn1').on('click',function(){
@@ -42,7 +42,7 @@
     </div>
   </div>
 	<script>
-		KISSY.use('js/message',function(S,Message){
+		KISSY.use('bootstrap/message',function(S,Message){
 			var msg = new Message({srcNode : '#J_Msg'});
 			S.one('#J_Btn1').on('click',function(){
 				msg.show();

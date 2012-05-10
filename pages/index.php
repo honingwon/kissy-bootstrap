@@ -18,7 +18,7 @@
 
 <div id="J_Header" class="hero-unit">
 	<div class="page-header">
-		<h1>CRM Design Pattern Library</h1>
+		<h1>Design Pattern Library</h1>
 	</div>
 	<p class="sub-header">—— 简单、快捷、轻量的后台页面界面交互组件</p>
 	<p>

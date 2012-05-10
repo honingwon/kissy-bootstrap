@@ -1,4 +1,4 @@
-KISSY.add(function(S,O){
+KISSY.add('bootstrap/tooltip',function(S,O){
 	var ATTR_TITLE = 'data-title';
 	function tooltip(config){
 		var selector = config.selector,

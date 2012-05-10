@@ -18,6 +18,7 @@ set TOOLS_LESS_DIR=tools\less\
 	mkdir  docs\assets\css
 	mkdir  docs\assets\img
 	mkdir  docs\assets\js
+	mkdir  docs\assets\js\bootstrap
 	mkdir  docs\components
 	mkdir  docs\templates
 	mkdir  docs\plug-in
@@ -26,6 +27,7 @@ set TOOLS_LESS_DIR=tools\less\
 	copy pages\assets\css\* docs\assets\css\
 	copy pages\assets\img\* docs\assets\img\
 	copy pages\assets\js\* docs\assets\js\
+	copy pages\assets\js\bootstrap\* docs\assets\js\bootstrap\
 	copy pages\*.php	docs\
 	copy pages\components\*.php docs\components\
 	copy pages\templates\*.php docs\templates\

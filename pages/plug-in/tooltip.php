@@ -18,13 +18,13 @@
 &lt;a href="#" rel="tooltip" title="first tooltip"&gt;			
 		 </pre>
 		 <pre class="prettyprint linenums">
-KISSY.use('js/tooltip',function(S,Tooltip){
+KISSY.use('bootstrap/tooltip',function(S,Tooltip){
 	Tooltip({selector : '#J_Tips a'});
 });
 		 </pre>
 		</div>
 		<script>
-			KISSY.use('js/tooltip',function(S,Tooltip){
+			KISSY.use('bootstrap/tooltip',function(S,Tooltip){
 				Tooltip({selector : '#J_Tips a'});
 			});
 		</script>
