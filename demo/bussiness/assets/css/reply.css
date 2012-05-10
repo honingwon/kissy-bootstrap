@@ -1,0 +1,49 @@
+.reply-list .row {
+  display: none;
+}
+.reply-type-reply .reply-title,
+.reply-type-reply .reply-content {
+  float: right;
+}
+.reply-user-img {
+  margin-left: 30px;
+  margin-top: 40px;
+}
+.reply-time {
+  float: left;
+}
+.reply-mask {
+  float: right;
+}
+.reply-type-reply .reply-user-img {
+  margin-left: 0;
+}
+.reply-type-reply .reply-time {
+  float: right;
+}
+.reply-type-reply .reply-mask {
+  float: left;
+}
+.reply-content {
+  position: relative;
+}
+.reply-content .popover {
+  display: block;
+  position: relative;
+}
+.reply-content .popover-inner {
+  width: auto;
+}
+.show-all .row,
+.show-buy .reply-type-buy,
+.show-sale .reply-type-sale,
+.show-reply .reply-type-reply {
+  display: block;
+}
+
+.reply-more-link{
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

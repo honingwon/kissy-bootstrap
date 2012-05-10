@@ -1,0 +1,51 @@
+.oi-container{
+	position:relative;
+}
+
+.oi-data{
+	position:relative;
+	.close{
+		position:absolute;
+		right:0px;
+		font-size:55px;
+		top:10px;
+	}
+}
+
+.oi-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	a {
+	outline: none;
+	}
+}
+
+.oi-prev, .oi-next {
+	width: 49%;
+	height: 100%;
+	background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+	display: block;
+}
+
+.oi-next {
+	right: 0;
+	float: right;
+}
+
+.oi-prev {
+	left: 0;
+	float: left;
+}
+
+.oi-prev:hover {
+  background: url("http://img04.taobaocdn.com/tps/i4/T1ZOOjXgXKXXXoadrh-50-45.png") left 48% no-repeat;
+}
+
+/* line 85, ../sass/lightbox.sass */
+.oi-next:hover {
+  background: url("http://img03.taobaocdn.com/tps/i3/T1xcu1Xl4qXXXoadrh-50-45.png") right 48% no-repeat;
+}
