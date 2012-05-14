@@ -22,7 +22,7 @@
 	</div>
 	<p class="sub-header">—— 简单、快捷、轻量的后台页面界面交互组件</p>
 	<p>
-		<a id="J_TutorialStart" class="btn btn-primary btn-large pull-right">
+		<a id="J_TutorialStart" class="ks-button ks-button-primary ks-button-large pull-right">
 			快速上手 </a>
 	</p>
 </div>
@@ -35,7 +35,7 @@
 				以一张空白页面作为你的起点，拷贝<a href="scaffolding.php#page" target="_blank">页面脚手架</a>，开始你的旅程。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large pull-right"> 下一步 </a>
+				<a class="ks-button ks-button-primary ks-button-large pull-right"> 下一步 </a>
 			</p>
 		</div>
 		<div class="hero-unit step" style="display: none">
@@ -45,7 +45,7 @@
 					target="_blank">布局</a>的解决方案。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large pull-right"> 下一步 </a>
+				<a class="ks-button ks-button-primary ks-button-large pull-right"> 下一步 </a>
 			</p>
 		</div>
 		<div class="hero-unit step" style="display: none">
@@ -54,7 +54,7 @@
 				规划页面框架，使用<a href="scaffolding.php#grid" target="_blank">栅格系统</a>把页面划分为几大块。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large pull-right"> 下一步 </a>
+				<a class="ks-button ks-button-primary ks-button-large pull-right"> 下一步 </a>
 			</p>
 		</div>
 		<div class="hero-unit step" style="display: none">
@@ -66,14 +66,14 @@
 					<a href="table.php" target="_blank">表格组件</a>。
 			</p>
 			<p>
-				<a class="btn btn-primary btn-large pull-right"> 下一步 </a>
+				<a class="ks-button ks-button-primary ks-button-large pull-right"> 下一步 </a>
 			</p>
 		</div>
 		<div class="hero-unit step" style="display: none">
 			<h2>第五步：使用JavaSctipt</h2>
 			<p>为了让组件能够与用户交互，你还需引入我们提供的JavaScript，更复杂的逻辑等待你的实现⋯⋯</p>
 			<p>
-				<a class="btn btn-primary btn-large pull-right"> 从头开始 </a>
+				<a class="ks-button ks-button-primary ks-button-large pull-right"> 从头开始 </a>
 			</p>
 		</div>
 	</div>
@@ -89,14 +89,14 @@ KISSY.use("switchable", function (S, Switchable) {
 		S.DOM.css('#J_Tutorial', 'display', 'block');
 		slide = new Switchable.Slide('#J_Tutorial', {
 	    	autoplay: false,
-	        effect : 'scrolly',
+	        effect : 'fade',
 	        easing : 'easeOutStrong'
 	    });
 		});
-
-	S.Event.on('#J_Tutorial .step .btn', 'click', function() {
+	S.all('.ks-button','#J_Tutorial').on('click',function(){
 		slide.next();
-		});
+	});
+	
 	
  });
 </script>
