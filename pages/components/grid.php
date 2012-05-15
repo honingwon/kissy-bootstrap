@@ -4,44 +4,77 @@
 	id="grid">
 	<div class="page-header">
 		<h1>
-			栅格 <small>12列栅格系统</small>
+			栅格 <small>24列栅格系统</small>
 		</h1>
 	</div>
-
 	<div class="row show-grid">
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
+		<div class="span1">1</div>
 	</div>
 	<div class="row show-grid">
-		<div class="span8">4</div>
-		<div class="span8">4</div>
-		<div class="span8">4</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
 	</div>
 	<div class="row show-grid">
-		<div class="span8">4</div>
-		<div class="span16">8</div>
+		<div class="span4">4</div>
+		<div class="span4">4</div>
+		<div class="span4">4</div>
+		<div class="span4">4</div>
+		<div class="span4">4</div>
+		<div class="span4">4</div>
 	</div>
 	<div class="row show-grid">
-		<div class="span12">6</div>
-		<div class="span12">6</div>
+		<div class="span8">8</div>
+		<div class="span8">8</div>
+		<div class="span8">8</div>
 	</div>
 	<div class="row show-grid">
-		<div class="span24">12</div>
+		<div class="span8">8</div>
+		<div class="span16">16</div>
+	</div>
+	<div class="row show-grid">
+		<div class="span12">12</div>
+		<div class="span12">12</div>
+	</div>
+	<div class="row show-grid">
+		<div class="span24">24</div>
 	</div>
 	<div class="row">
 		<div class="span8">
 			<p>
-				默认的<strong>12列、940px</strong>宽度的栅格系统。
+				默认的<strong>24列、1190px</strong>宽度的栅格系统。
 			</p>
 			<p>同时，针对不同设备不同的宽度，我们也做了可响应设计。</p>
 		</div>
@@ -56,7 +89,7 @@
 		</div>
 		<!-- /.span -->
 		<div class="span8">
-			<p>页面被我们分割成12个基础列，你通过指定横跨多少列来控制每个区域的宽度。</p>
+			<p>页面被我们分割成24个基础列，你通过指定横跨多少列来控制每个区域的宽度。</p>
 		</div>
 		<!-- /.span -->
 	</div>
@@ -66,23 +99,23 @@
 
 	<h2>带有偏移量的列</h2>
 	<div class="row show-grid">
-		<div class="span8">4</div>
-		<div class="span8 offset4">4 offset 4</div>
+		<div class="span8">8</div>
+		<div class="span8 offset8">8 offset 8</div>
 	</div>
 	<!-- /row -->
 	<div class="row show-grid">
-		<div class="span6 offset3">3 offset 3</div>
-		<div class="span6 offset3">3 offset 3</div>
+		<div class="span6 offset6">6 offset 6</div>
+		<div class="span6 offset6">6 offset 6</div>
 	</div>
 	<!-- /row -->
 	<div class="row show-grid">
-		<div class="span16 offset4">8 offset 4</div>
+		<div class="span16 offset8">16 offset 8</div>
 	</div>
 	<!-- /row -->
 	<pre class="prettyprint linenums">
 &lt;div class="row"&gt;
   &lt;div class="span8"&gt;...&lt;/div&gt;
-  &lt;div class="span8 offset4"&gt;...&lt;/div&gt;
+  &lt;div class="span8 offset8"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -150,34 +183,34 @@
 
 	<h2>自适应列</h2>
 	<div class="row-fluid show-grid">
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
-		<div class="span2">1</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
+		<div class="span2">2</div>
 	</div>
 	<div class="row-fluid show-grid">
-		<div class="span8">4</div>
-		<div class="span8">4</div>
-		<div class="span8">4</div>
+		<div class="span8">8</div>
+		<div class="span8">8</div>
+		<div class="span8">8</div>
 	</div>
 	<div class="row-fluid show-grid">
-		<div class="span8">4</div>
-		<div class="span16">8</div>
+		<div class="span8">8</div>
+		<div class="span16">16</div>
 	</div>
 	<div class="row-fluid show-grid">
-		<div class="span12">6</div>
-		<div class="span12">6</div>
+		<div class="span12">12</div>
+		<div class="span12">12</div>
 	</div>
 	<div class="row-fluid show-grid">
-		<div class="span24">12</div>
+		<div class="span24">24</div>
 	</div>
 
 	<div class="row">
@@ -211,10 +244,10 @@
 			<p>在自适应列的嵌套中，子列的数值之和不一定等于父列，而是按照百分比计算的宽度。</p>
 			<div class="row-fluid show-grid">
 				<div class="span24">
-					Fluid 12
+					Fluid 24
 					<div class="row-fluid show-grid">
-						<div class="span6">Fluid 3</div>
-						<div class="span12">Fluid 6</div>
+						<div class="span6">Fluid 6</div>
+						<div class="span12">Fluid 12</div>
 					</div>
 				</div>
 			</div>

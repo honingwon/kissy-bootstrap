@@ -4,7 +4,7 @@
       ================================================== -->
 <header id="overview">
 	<h1>框架</h1>
-	<p class="lead">DPL基于Bootstrap的12列栅格系统，提供了多种布局模式。</p>
+	<p class="lead">DPL基于Bootstrap的24列栅格系统，提供了多种布局模式。</p>
 	<div class="subnav">
 		<ul class="nav nav-pills">
 			<li><a href="#page">页面</a></li>
