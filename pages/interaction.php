@@ -1,3 +1,4 @@
+<?php	 $page = "interaction" ?>
 <?php $title="DPL 交互组件"?>
 <?php include("./templates/header.php"); ?>
 <!-- Masthead

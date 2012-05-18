@@ -1,3 +1,4 @@
+<?php	 $page = "dpl-plugin" ?>
 <?php $title="DPL 插件"?>
 <?php include("./templates/header.php"); ?>
 <!-- Masthead

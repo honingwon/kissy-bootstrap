@@ -1,3 +1,4 @@
+<?php	 $page = "scaffolding" ?>
 <?php include("./templates/header.php"); ?>
 
 <!-- Masthead

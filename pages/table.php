@@ -1,3 +1,4 @@
+<?php	 $page = "table" ?>
 <?php $title="DPL 表格"?>
 <?php include("./templates/header.php"); ?>
 <!-- Masthead

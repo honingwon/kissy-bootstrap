@@ -30,19 +30,19 @@
 				<a class="brand" href="./index.php">DPL</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li class="active"><a href="./index.php">概要</a>
+						<li <?php if(isset($page) && $page == 'index') echo 'class="active"' ?> ><a href="./index.php">概要</a>
 						</li>
-						<li class=""><a href="./scaffolding.php">框架</a>
+						<li  <?php if(isset($page) && $page == 'scaffolding') echo 'class="active"'?>><a href="./scaffolding.php">框架</a>
 						</li>
-						<li class=""><a href="./base.php">基础样式</a>
+						<li <?php if(isset($page) && $page == 'base') echo 'class="active"'?>><a href="./base.php">基础样式</a>
 						</li>
-						<li class=""><a href="./interaction.php">交互组件</a>
+						<li <?php if(isset($page) && $page == 'interaction') echo 'class="active"'?>><a href="./interaction.php">交互组件</a>
 						</li>
-						<li class=""><a href="./form.php">表单</a>
+						<li  <?php if(isset($page) && $page == 'form') echo 'class="active"'?>><a href="./form.php">表单</a>
 						</li>
-						<li class=""><a href="./table.php">表格</a>
+						<li <?php if(isset($page) && $page == 'table') echo 'class="active"'?>><a href="./table.php">表格</a>
 						</li>
-						<li class=""><a href="./dpl-plugin.php">DPL 插件</a>
+						<li <?php if(isset($page) && $page == 'dpl-plugin') echo 'class="active"'?>><a href="./dpl-plugin.php">DPL 插件</a>
 						</li>
 					</ul>
 				</div>

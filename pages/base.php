@@ -1,3 +1,4 @@
+<?php	 $page = "base" ?>
 <?php include("./templates/header.php"); ?>
 
 <!-- Masthead

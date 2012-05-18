@@ -1,3 +1,4 @@
+<?php	 $page = "index" ?>
 <?php $title="CRM Design Pattern Library"?>
 <?php include("./templates/header.php"); ?>
 

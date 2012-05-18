@@ -145,6 +145,7 @@
 			if(!overlay.get('visible')){
 				linkItems = el.all('.' + CLS_ITEM);
 				_self.set('linkItems',linkItems);
+				overlay.set('align',{points: ['cc', 'cc']});
 				overlay.show();
 			}
 			if(currentItem && currentItem.attr('href' === src)){

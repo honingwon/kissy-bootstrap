@@ -1,3 +1,4 @@
+<?php	 $page = "bussiness" ?>
 <?php $title="CRM 业务控件"?>
 <?php include("./templates/header.php"); ?>
 <!-- Masthead
