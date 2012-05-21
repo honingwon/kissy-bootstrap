@@ -83,16 +83,16 @@
 		_initOverlay : function(){
 			var _self = this,
 				overlay = new O({
-					content : '<div class="oi-outer"><div class="oi-container"><img class="oi-img" src="http://lokeshdhakar.com/projects/lightbox2/images/loading.gif"/><div class="oi-nav" style="display: block; "><a class="oi-prev" style="display: block; "></a><a class="oi-next" style="display: block; "></a></div></div>' +
-							'<div class="oi-data"><div class="oi-title"></div><div class="oi-numer"></div><a href="#" class="close">×</a></div></div>',
+					content : '<div class="oi-outer"><div class="oi-container"><a href="#" class="close">×</a><img class="oi-img" src="http://placehold.it/500x500"/><div class="oi-nav" style="display: block; "><a class="oi-prev" style="display: block; "></a><a class="oi-next" style="display: block; "></a></div></div>' +
+							'<div class="oi-data"><div class="oi-title"></div><div class="oi-numer"></div></div></div>',
 					effect:{
 						effect:'fade', //"fade",
 						duration:0.5
 					},align: {
 					   points: ['cc', 'cc']
 					},
-					width : 500,
-					height : 530,
+					width:500,
+					height:500,
 					closable : false,
 					mask:true
 				});
@@ -105,11 +105,13 @@
 				overlay = _self.get('overlay'),
 				overlayEl = null,
 				prevEl = null,
-				nextEl = null;
+				nextEl = null,
+				imgEl = null;
 			overlay.on('afterRenderUI',function(){
 				overlayEl = overlay.get('el');
 				prevEl = overlayEl.one('.oi-prev');
 				nextEl = overlayEl.one('.oi-next');
+				imgEl = overlayEl.one('.oi-img');
 				overlayEl.delegate('click','.close',function(event){
 					event.halt();
 					overlay = _self.get('overlay');
@@ -126,6 +128,14 @@
 					event.halt();
 					var nextItem = _self._getNextItem();
 					_self._showItem(nextItem);
+				});
+
+				imgEl.on('load',function(event){
+					var width = imgEl.width(),
+						height = imgEl.height();
+					overlay.set('width',width);
+					overlay.set('height',height);
+					overlay.set('align',{points: ['cc', 'cc']});
 				});
 
 			});
@@ -145,7 +155,7 @@
 			if(!overlay.get('visible')){
 				linkItems = el.all('.' + CLS_ITEM);
 				_self.set('linkItems',linkItems);
-				overlay.set('align',{points: ['cc', 'cc']});
+				
 				overlay.show();
 			}
 			if(currentItem && currentItem.attr('href' === src)){
@@ -165,7 +175,7 @@
 			container.one('.oi-img').attr('src',item.attr('href'));
 			container.one('.oi-title').text(item.attr('title'));
 			if(img){
-				container.one('.oi-numer').text(item.attr('alt'));
+				container.one('.oi-numer').text(img.attr('alt'));
 			}
 			//设置是否可以查看前一个图片
 			if(_self._getPrevItem(item)){

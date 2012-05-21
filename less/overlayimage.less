@@ -1,15 +1,25 @@
 .oi-container{
 	position:relative;
+	.close{
+		position:absolute;
+		right: -24px;
+		top: -24px;
+		text-indent:-50px;
+		width:24px;
+		height:24px;
+		overflow:hidden;
+		background: url("http://img03.taobaocdn.com/tps/i3/T1yv98XftsXXaPT2Hb-24-24.gif");
+		opacity: 1;
+		filter: alpha(opacity=1);
+		&:hover {
+			.opacity(100);
+		}
+	}
 }
 
 .oi-data{
 	position:relative;
-	.close{
-		position:absolute;
-		right:0px;
-		font-size:55px;
-		top:10px;
-	}
+	color:@white;
 }
 
 .oi-nav {
@@ -20,7 +30,7 @@
 	width: 100%;
 	z-index: 10;
 	a {
-	outline: none;
+		outline: none;
 	}
 }
 
