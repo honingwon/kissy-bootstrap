@@ -80,6 +80,11 @@ KISSY.use("overlay", function(S, O) {
 					event.halt();
 					d.hide();
 				});
+				d.get('el').all('.ks-button').on('click',function(event){
+					event.halt();
+					d.hide();
+				});
+				
 			});
 
 			S.one('#btnDialog').on('click', function() {

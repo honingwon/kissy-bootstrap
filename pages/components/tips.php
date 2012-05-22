@@ -12,9 +12,8 @@
 		
 		<div class="span16">
 			<h3>示例</h3>
-			<div style="height:40px">
-			<div class="tooltip fade top in" style="display: block;"><div class="tooltip-arrow"></div><div class="tooltip-inner">first tooltip</div></div>
-			</div>
+			<p id="J_Tips" class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="tooltip" title="first tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+			</p>
 			<h3>HTML代码</h3>
 			<p>tooltip的代码是javascript自动生成的，这里显示的是触发元素的HTML</p>
 <pre class="prettyprint linenums">
@@ -35,5 +34,9 @@
 			</div>
 		</div>
 	</div>
-	
+	<script>
+		KISSY.use('bootstrap/tooltip',function(S,Tooltip){
+			Tooltip({selector : '#J_Tips a'});
+		});
+	</script>
 </section>

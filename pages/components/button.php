@@ -495,10 +495,6 @@
   </div>
   <script>
     KISSY.use('button,menubutton',function(S,Button,MenuButton){
-      S.Event.delegate(document,'click','a.ks-button',function(event){
-        event.halt();
-      });
-
       S.all('.dropdown-toggle','#buttonDropdowns').each(function(item){
         
         var parent = item.parent(),

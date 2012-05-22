@@ -11,7 +11,7 @@
       <hr>
       <h3>KISSY DPL 插件的支持</h3>
       <p>使用KISSY 的DPL插件可以使Alert具有关闭、拖动等功能</p>
-      <p><a class="ks-button js-btn" href="./javascript.html#alerts">获取 plugin &raquo;</a></p>
+      <p><a class="ks-button js-btn" href="dpl-plugin.php#message">获取 plugin &raquo;</a></p>
     </div>
     <div class="span16">
       <h3>示例</h3>
@@ -80,5 +80,12 @@
 </pre>
     </div>
   </div>
-
+<script>
+	KISSY.use('bootstrap/message',function(S,Message){
+		S.all('.alert','#alert').each(function(item){
+			new Message({srcNode : item});
+		});
+		
+	});
+</script>
 </section>

@@ -1,6 +1,8 @@
 <?php	 $page = "interaction" ?>
 <?php $title="DPL 交互组件"?>
 <?php include("./templates/header.php"); ?>
+
+
 <!-- Masthead
       ================================================== -->
 <header id="overview">
@@ -19,6 +21,15 @@
 		</ul>
 	</div>
 </header>
+<script>
+	KISSY.config({
+		packages:[{
+			name:"bootstrap",
+			tag:"201204271014",
+			path:"./assets/js/"
+		}]
+	});
+</script>
 <?php  include("./components/button.php"); ?>
 <?php  include("./components/tab.php"); ?>
 <?php  include("./components/pagination.php"); ?>
