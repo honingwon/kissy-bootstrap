@@ -93,7 +93,7 @@
       <h3>同一个样式，多种标签的实现</h3>
       <p>使用 <code>.ks-button</code> 样式在以下标签上 <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, 或者 <code>&lt;input&gt;</code> 。</p>
 <form>
-<a class="ks-button" href="">Link</a>
+<a class="ks-button" href="#">Link</a>
 <button class="ks-button" type="submit">Button</button>
 <input class="ks-button" type="button" value="Input">
 <input class="ks-button" type="submit" value="Submit">
@@ -176,8 +176,7 @@
     </div>
     <div class="span8">
       <h3>复选和单选</h3>
-      <p>按钮组可以实现复选框和单选框的功能，当只有一个按钮能被选中时可以用作单选框，多个按钮可以选中时用作复选框. 参考 <a href="./javascript.html#buttons">the Javascript docs</a> 查看更多内容。</p>
-      <p><a class="ks-button js-ks-button" href="./javascript.html#buttons">获取 javascript &raquo;</a></p>
+      <p>按钮组可以实现复选框和单选框的功能，当只有一个按钮能被选中时可以用作单选框，多个按钮可以选中时用作复选框. 参考 <a href="dpl-plugin.php#button">the Javascript docs</a> 查看更多内容。</p>
       <h3>下拉按钮在按钮组中</h3>
       <p><span class="label label-info">警告!</span> 在工具栏<code>.ks-button-toolbar</code>中使用下拉按钮应该单独的被包含在<code>.ks-button-group</code>。</p>
     </div>
@@ -198,76 +197,75 @@
       <p>使用按钮代替下拉菜单，设置class <code>.ks-button-group</code> 和合适的标签。</p>
       <div class="ks-button-toolbar" style="margin-top: 18px;">
         <div class="ks-button-group">
-          <button class="ks-button dropdown-toggle" data-toggle="dropdown">Action <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <div class="ks-button dropdown-toggle">Action
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</div>
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown">Action <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown">Action 
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-danger dropdown-toggle" data-toggle="dropdown">
+					Danger 
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
       </div>
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
-          <button class="ks-button ks-button-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-warning dropdown-toggle" data-toggle="dropdown">
+					Warning 
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown">Success <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown">Success
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+         
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown">Info <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown">Info 
+							<ul class="ks-menu ks-popupmenu">
+								<li class="ks-menuitem">Action</li>
+								<li class="ks-menuitem">Another action</li>
+								<li class="ks-menuitem">Something else here</li>
+							</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown">Inverse <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown">Inverse 
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
     </div>
@@ -275,14 +273,12 @@
       <h3>示例</h3>
       <p>类似于按钮组，我们使用通用的按钮标签和一些重新定义了的样式来支持kissy的DPL插件.</p>
 <pre class="prettyprint linenums">
-&lt;div class="ks-button-group"&gt;
-  &lt;a class="ks-button dropdown-toggle" data-toggle="dropdown" href="#"&gt;
-    Action
-    &lt;span class="ks-button-dropdown"&gt;&lt;/span&gt;
-  &lt;/a&gt;
-  &lt;ul class="ks-menu"&gt;
-    &lt;!-- dropdown menu links --&gt;
-  &lt;/ul&gt;
+&lt;div class="ks-button dropdown-toggle"&gt;Action
+	&lt;ul class="ks-menu ks-popupmenu"&gt;
+		&lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+		&lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+		&lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/div&gt;
 </pre>
     </div>
@@ -293,40 +289,40 @@
       <p>下拉按钮适用于多种尺寸大小. 你可以定义 <code>.ks-button-large</code>, <code>.ks-button-small</code>, 或者 <code>.ks-button-mini</code>三种类型。</p>
       <div class="ks-button-toolbar" style="margin-top: 18px;">
         <div class="ks-button-group">
-          <button class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown">Large button <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown">Large button 
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown">Small button <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown">Small button 
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown">Mini button <span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown">Mini button 
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
     </div><!--/span-->
     <div class="span8">
       <h3>javascript 依赖</h3>
-      <p>下拉按钮依赖于<a href="./javascript.html#dropdowns">DPL 下拉按钮插件</a>。</p>
+      <p>下拉按钮依赖于<a href="dpl-plugin.php#drowpButton">DPL 下拉按钮插件</a>。</p>
       <p>在某些情形下&mdash;利于移动设备&mdash;下拉按钮可能会超出当前的可视区域. 你需要手动或者使用javascript的方式解决屏幕的自适应问题。</p>
     </div><!--/span-->
   </div><!--/row-->
@@ -340,84 +336,81 @@
       <div class="ks-button-toolbar" style="margin-top: 18px;">
         <div class="ks-button-group">
           <button class="ks-button">Action</button>
-          <button class="ks-button dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <div class="ks-button dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</div>
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
           <button class="ks-button ks-button-primary">Action</button>
-          <button class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-primary dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
           <button class="ks-button ks-button-danger">Danger</button>
-          <button class="ks-button ks-button-danger dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-danger dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
       </div>
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
           <button class="ks-button ks-button-warning">Warning</button>
-          <button class="ks-button ks-button-warning dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-warning dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+         
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
           <button class="ks-button ks-button-success">Success</button>
-          <button class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-success dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
           <button class="ks-button ks-button-info">Info</button>
-          <button class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-info dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
         </div><!-- /ks-button-group -->
       </div>
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
           <button class="ks-button ks-button-inverse">Inverse</button>
-          <button class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-inverse dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
       <h3>尺寸</h3>
@@ -425,50 +418,41 @@
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
           <button class="ks-button ks-button-large">Large action</button>
-          <button class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-large dropdown-toggle" >
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
           <button class="ks-button ks-button-small">Small action</button>
-          <button class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-small dropdown-toggle" >
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
           <button class="ks-button ks-button-mini">Mini action</button>
-          <button class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button ks-button-mini dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
-<pre class="prettyprint linenums">
-&lt;div class="ks-button-group"&gt;
-  ...
-  &lt;ul class="ks-menu pull-right"&gt;
-    &lt;!-- dropdown menu links --&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+
     </div>
     <div class="span16">
       <h3>标签示例</h3>
@@ -489,25 +473,24 @@
       <div class="ks-button-toolbar" style="margin-top: 9px;">
         <div class="ks-button-group dropup">
           <button class="ks-button">Dropup</button>
-          <button class="ks-button dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button dropdown-toggle">
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
         </div><!-- /ks-button-group -->
         <div class="ks-button-group dropup">
           <button class="ks-button primary">Right dropup</button>
-          <button class="ks-button primary dropdown-toggle" data-toggle="dropdown"><span class="ks-button-dropdown"></span></button>
-          <ul class="ks-menu pull-right">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
+          <button class="ks-button primary dropdown-toggle" >
+						<ul class="ks-menu ks-popupmenu">
+							<li class="ks-menuitem">Action</li>
+							<li class="ks-menuitem">Another action</li>
+							<li class="ks-menuitem">Something else here</li>
+						</ul>
+					</button>
+          
         </div><!-- /ks-button-group -->
       </div>
 <pre class="prettyprint linenums">
@@ -524,5 +507,19 @@
 
     </div>
   </div>
+	<script>
+		KISSY.use('button,menubutton',function(S,Button,MenuButton){
+			S.Event.delegate(document,'click','a.ks-button',function(event){
+				event.halt();
+			});
+
+			S.all('.dropdown-toggle','#buttonDropdowns').each(function(item){
+				var btn = new MenuButton({
+					srcNode : item
+				});
+				btn.render();
+			});
+		});
+	</script>
 </section>
 

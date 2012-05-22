@@ -138,23 +138,23 @@
 
 // Reposition the caret
 .ks-button {
-	.ks-menu-button-dropdown, .ks-button-dropdown{
+	.ks-menu-button-dropdown{
 		margin-top: 7px;
 		margin-left: 0;
 	}
 }
-.ks-button:hover .ks-button-dropdown,
-.open.ks-button-group .ks-button-dropdown {
+.ks-button:hover .ks-menu-button-dropdown,
+.open.ks-button-group .ks-menu-button-dropdown {
   .opacity(100);
 }
 // Carets in other button sizes
-.ks-button-mini .ks-button-dropdown{
+.ks-button-mini .ks-menu-button-dropdown{
   margin-top: 5px;
 }
-.ks-button-small .ks-button-dropdown{
+.ks-button-small .ks-menu-button-dropdown{
   margin-top: 6px;
 }
-.ks-button-large .ks-button-dropdown{
+.ks-button-large .ks-menu-button-dropdown{
   margin-top: 6px;
   border-left:  5px solid transparent;
   border-right: 5px solid transparent;
@@ -169,7 +169,7 @@
 .ks-button-info,
 .ks-button-success,
 .ks-button-inverse {
-  .ks-button-dropdown {
+  .ks-menu-button-dropdown {
     border-top-color: @white;
     border-bottom-color: @white;
     .opacity(75);

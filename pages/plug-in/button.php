@@ -171,7 +171,7 @@ S.log(group1.get('checkedValue'));
 		</div>
 	</div>
 	<h2>下拉按钮</h2>
-	<div class="row">
+	<div id="drowpButton" class="row">
 		<div class="span12">
 			<h3>关于下拉按钮</h3>
 			<p>通过菜单的形式组织按钮。</p>
@@ -253,9 +253,55 @@ mb1.on('click',function(event){
 			</pre>
 		</div>
 	</div>
+
+	<h2>分离式下拉按钮</h2>
+  <div id="splitButton" class="row">
+		<div class="span12">
+			<h3>关于分离式下拉按钮</h3>
+			<p>分离式下拉按钮，包括2部分，前半部分跟一般按钮使用方式一样，点击触发事件；后半部分点是一个下拉按钮，选中相关项时，前半部分的按钮切换到此项功能。</p>
+			<h3>引入方式</h3>
+			<ul>
+				<li>分别生成按钮和下拉按钮，生成方式可参看按钮和下拉按钮的生成,在外层包一个<code>ks-button-group</code></li>
+			</ul>
+		</div>
+
+		<div class="span12">
+			<h3>使用JS生成</h3>
+			<p>仅仅提供了使用JS生成按钮的方式</p>
+			<div class="ks-button-group">
+				<button id="splitBtn" class="ks-button">action</button>
+				<button id="splitMenuBtn" class="ks-button">
+					<ul class="ks-menu ks-popupmenu">
+						<li class="ks-menuitem">Action</li>
+						<li class="ks-menuitem">Another action</li>
+						<li class="ks-menuitem">Something else here</li>
+					</ul>
+				</button>
+			</div>
+			<pre class="prettyprint linenums">
+&lt;div class="ks-button-group"&gt;
+	&lt;button id="splitBtn" class="ks-button"&gt;action&lt;/button&gt;
+	&lt;button id="splitMenuBtn" class="ks-button"&gt;
+		&lt;ul class="ks-menu ks-popupmenu"&gt;
+			&lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+			&lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+			&lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/button&gt;
+&lt;/div&gt;
+			</pre>
+			<pre class="prettyprint linenums">
+	var splitBtn = new Button.Split({
+		first:new Button({srcNode:'#splitBtn'}),
+		second : new MenuButton({srcNode:'#splitMenuBtn'})
+	});
+	splitBtn.render();
+			</pre>
+		</div>
+	</div>
 	<script>
 			
-			KISSY.use('button,bootstrap/buttongroup',function(S,Button,ButtonGroup){
+			KISSY.use('button,bootstrap/buttongroup,menubutton,menu',function(S,Button,ButtonGroup, MenuButton, Menu){
 				var primaryButton = new Button({
 					srcNode:'#primary'
 				});
@@ -353,9 +399,7 @@ mb1.on('click',function(event){
 				group1.on('checkedChanged',function(){
 					S.log(group1.get('checkedValue'));
 				});
-			});
-
-			KISSY.use("menubutton,menu", function (S, MenuButton, Menu) {
+				
 				var mb = new MenuButton({
 					srcNode : '#J_MButton'
 				})
@@ -386,6 +430,16 @@ mb1.on('click',function(event){
 					event.halt();
 					var item = event.target;
 					alert(item.get('value'));
+				});
+
+				var splitBtn = new Button.Split({
+					first:new Button({srcNode:'#splitBtn'}),
+					second : new MenuButton({srcNode:'#splitMenuBtn'})
+				});
+				splitBtn.render();
+				splitBtn.get('first').on('click',function(event){
+					//var btn = event.target;
+					alert(this.get('content'));
 				});
 			});
 
