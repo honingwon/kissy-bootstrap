@@ -196,77 +196,68 @@
       <h3>概述和示例</h3>
       <p>使用按钮代替下拉菜单，设置class <code>.ks-button-group</code> 和合适的标签。</p>
       <div class="ks-button-toolbar" style="margin-top: 18px;">
-        <div class="ks-button-group">
+       
           <div class="ks-button dropdown-toggle">Action
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</div>
-        </div><!-- /ks-button-group -->
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown">Action 
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
-        </div><!-- /ks-button-group -->
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-danger dropdown-toggle" data-toggle="dropdown">
-					Danger 
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+       
+          <div class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown">Action 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+       
+          <div class="ks-button ks-button-danger dropdown-toggle" data-toggle="dropdown">
+          Danger 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
           
-        </div><!-- /ks-button-group -->
+
       </div>
       <div class="ks-button-toolbar">
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-warning dropdown-toggle" data-toggle="dropdown">
-					Warning 
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
-        </div><!-- /ks-button-group -->
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown">Success
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
-         
-        </div><!-- /ks-button-group -->
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown">Info 
-							<ul class="ks-menu ks-popupmenu">
-								<li class="ks-menuitem">Action</li>
-								<li class="ks-menuitem">Another action</li>
-								<li class="ks-menuitem">Something else here</li>
-							</ul>
-					</button>
-          
-        </div><!-- /ks-button-group -->
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown">Inverse 
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
-          
-        </div><!-- /ks-button-group -->
+          <div class="ks-button ks-button-warning dropdown-toggle" data-toggle="dropdown">
+          Warning 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+          <div class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown">Success
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+          <div class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown">Info 
+              <ul class="ks-menu ks-popupmenu">
+                <li class="ks-menuitem">Action</li>
+                <li class="ks-menuitem">Another action</li>
+                <li class="ks-menuitem">Something else here</li>
+              </ul>
+          </div>
+          <div class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown">Inverse 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
       </div><!-- /ks-button-toolbar -->
     </div>
     <div class="span16">
@@ -274,11 +265,11 @@
       <p>类似于按钮组，我们使用通用的按钮标签和一些重新定义了的样式来支持kissy的DPL插件.</p>
 <pre class="prettyprint linenums">
 &lt;div class="ks-button dropdown-toggle"&gt;Action
-	&lt;ul class="ks-menu ks-popupmenu"&gt;
-		&lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
-		&lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
-		&lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
-	&lt;/ul&gt;
+  &lt;ul class="ks-menu ks-popupmenu"&gt;
+    &lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+    &lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+    &lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
     </div>
@@ -288,36 +279,31 @@
       <h3>可以适用于各种尺寸的按钮</h3>
       <p>下拉按钮适用于多种尺寸大小. 你可以定义 <code>.ks-button-large</code>, <code>.ks-button-small</code>, 或者 <code>.ks-button-mini</code>三种类型。</p>
       <div class="ks-button-toolbar" style="margin-top: 18px;">
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown">Large button 
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown">Large button 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
           
-        </div><!-- /ks-button-group -->
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown">Small button 
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
-          
-        </div><!-- /ks-button-group -->
-        <div class="ks-button-group">
-          <button class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown">Mini button 
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
-          
-        </div><!-- /ks-button-group -->
+
+          <div class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown">Small button 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+          <div class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown">Mini button 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
       </div><!-- /ks-button-toolbar -->
     </div><!--/span-->
     <div class="span8">
@@ -335,121 +321,121 @@
       <p>在分组按钮的样式和标签基础上我们可以很容易的创建分离式下拉按钮。分离式下拉按钮左边部分有标准的按钮功能，右边部分有一个下拉菜单。</p>
       <div class="ks-button-toolbar" style="margin-top: 18px;">
         <div class="ks-button-group">
-          <button class="ks-button">Action</button>
+          <div class="ks-button">Action</div>
           <div class="ks-button dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</div>
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-primary">Action</button>
-          <button class="ks-button ks-button-primary dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-primary">Action</div>
+          <div class="ks-button ks-button-primary dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
           
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-danger">Danger</button>
-          <button class="ks-button ks-button-danger dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-danger">Danger</div>
+          <div class="ks-button ks-button-danger dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
           
         </div><!-- /ks-button-group -->
       </div>
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
-          <button class="ks-button ks-button-warning">Warning</button>
-          <button class="ks-button ks-button-warning dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-warning">Warning</div>
+          <div class="ks-button ks-button-warning dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
          
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-success">Success</button>
-          <button class="ks-button ks-button-success dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-success">Success</div>
+          <div class="ks-button ks-button-success dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
           
         </div><!-- /ks-button-group -->
         <div class="ks-button-group">
-          <button class="ks-button ks-button-info">Info</button>
-          <button class="ks-button ks-button-info dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-info">Info</div>
+          <div class="ks-button ks-button-info dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
         </div><!-- /ks-button-group -->
       </div>
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
-          <button class="ks-button ks-button-inverse">Inverse</button>
-          <button class="ks-button ks-button-inverse dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-inverse">Inverse</div>
+          <div class="ks-button ks-button-inverse dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
       <h3>尺寸</h3>
       <p>可以设置额外的按钮样式<code>.ks-button-mini</code>, <code>.ks-button-small</code>, 或者 <code>。ks-button-large</code> 来定义按钮的大小</p>
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
-          <button class="ks-button ks-button-large">Large action</button>
-          <button class="ks-button ks-button-large dropdown-toggle" >
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-large">Large action</div>
+          <div class="ks-button ks-button-large dropdown-toggle" >
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
           
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
-          <button class="ks-button ks-button-small">Small action</button>
-          <button class="ks-button ks-button-small dropdown-toggle" >
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-small">Small action</div>
+          <div class="ks-button ks-button-small dropdown-toggle" >
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
       <div class="ks-button-toolbar">
         <div class="ks-button-group">
-          <button class="ks-button ks-button-mini">Mini action</button>
-          <button class="ks-button ks-button-mini dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button ks-button-mini">Mini action</div>
+          <div class="ks-button ks-button-mini dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
         </div><!-- /ks-button-group -->
       </div><!-- /ks-button-toolbar -->
 
@@ -459,67 +445,81 @@
       <p>我们利用第二个按钮动作扩展了下拉按钮，点击右边图标时触发。</p>
 <pre class="prettyprint linenums">
 &lt;div class="ks-button-group"&gt;
-  &lt;button class="ks-button"&gt;Action&lt;/button&gt;
-  &lt;button class="ks-button dropdown-toggle" data-toggle="dropdown"&gt;
-    &lt;span class="ks-button-dropdown"&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;ul class="ks-menu"&gt;
-    &lt;!-- dropdown menu links --&gt;
-  &lt;/ul&gt;
+  &lt;div class="ks-button ks-button-mini"&gt;Mini action&lt;/div&gt;
+  &lt;div class="ks-button ks-button-mini dropdown-toggle"&gt;
+    &lt;ul class="ks-menu ks-popupmenu"&gt;
+      &lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+      &lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+      &lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
       <h3>展示向上的菜单</h3>
       <p>可以通过在<code>.ks-menu</code>的父元素上添加一个样式将下拉菜单在按钮的下部调整到按钮上方。这将更改右边图标<code>.ks-button-dropdown</code>的方向 同时重新定位菜单的位置，将菜单从按钮的下面移动到上方。</p>
       <div class="ks-button-toolbar" style="margin-top: 9px;">
         <div class="ks-button-group dropup">
-          <button class="ks-button">Dropup</button>
-          <button class="ks-button dropdown-toggle">
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button">Dropup</div>
+          <div class="ks-button dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
         </div><!-- /ks-button-group -->
         <div class="ks-button-group dropup">
-          <button class="ks-button primary">Right dropup</button>
-          <button class="ks-button primary dropdown-toggle" >
-						<ul class="ks-menu ks-popupmenu">
-							<li class="ks-menuitem">Action</li>
-							<li class="ks-menuitem">Another action</li>
-							<li class="ks-menuitem">Something else here</li>
-						</ul>
-					</button>
+          <div class="ks-button primary">Right dropup</div>
+          <div class="ks-button primary dropdown-toggle" >
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
           
         </div><!-- /ks-button-group -->
       </div>
 <pre class="prettyprint linenums">
-&lt;div class="ks-button-group dropup"&gt;
-  &lt;button class="ks-button"&gt;Dropup&lt;/button&gt;
-  &lt;button class="ks-button dropdown-toggle" data-toggle="dropdown"&gt;
-    &lt;span class="ks-button-dropdown"&gt;&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;ul class="ks-menu"&gt;
-    &lt;!-- dropdown menu links --&gt;
-  &lt;/ul&gt;
+&lt;div class="ks-button"&gt;Dropup&lt;/div&gt;
+&lt;div class="ks-button dropdown-toggle"&gt;
+	&lt;ul class="ks-menu ks-popupmenu"&gt;
+		&lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+		&lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+		&lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
     </div>
   </div>
-	<script>
-		KISSY.use('button,menubutton',function(S,Button,MenuButton){
-			S.Event.delegate(document,'click','a.ks-button',function(event){
-				event.halt();
-			});
+  <script>
+    KISSY.use('button,menubutton',function(S,Button,MenuButton){
+      S.Event.delegate(document,'click','a.ks-button',function(event){
+        event.halt();
+      });
 
-			S.all('.dropdown-toggle','#buttonDropdowns').each(function(item){
-				var btn = new MenuButton({
-					srcNode : item
-				});
-				btn.render();
-			});
-		});
-	</script>
+      S.all('.dropdown-toggle','#buttonDropdowns').each(function(item){
+        
+        var parent = item.parent(),
+						mbtn = new MenuButton({
+							srcNode : item
+						});
+        if(parent.hasClass('ks-button-group')){
+          var prev = item.prev('.ks-button'),
+              btn = new Button({srcNode : prev});
+					if(parent.hasClass('dropup')){
+						mbtn.set('menuAlign',{ points: ['tl','bl']});
+					}
+          new Button.Split({
+            first:btn,
+            second : mbtn
+          }).render();
+        }else{
+          mbtn.render();
+        }
+      });
+    });
+  </script>
 </section>
 

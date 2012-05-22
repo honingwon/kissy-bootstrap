@@ -252,6 +252,7 @@ mb1.on('click',function(event){
 });
 			</pre>
 		</div>
+		
 	</div>
 
 	<h2>分离式下拉按钮</h2>
