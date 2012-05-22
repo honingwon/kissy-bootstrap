@@ -59,9 +59,9 @@
       <p>为了使Tabs可以切换，在<code>.nav-tabs</code>的外层包装一层 div 并添加样式<code>.tabbable</code></p>
       <div class="tabbable" style="margin-bottom: 9px;">
         <ul class="nav nav-tabs">
-          <li class="ks-active"><a href="#1" data-toggle="tab">Section 1</a></li>
-          <li class=""><a href="#2" data-toggle="tab">Section 2</a></li>
-          <li class=""><a href="#3" data-toggle="tab">Section 3</a></li>
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 1</a></li>
+          <li class=""><a href="#" data-toggle="tab">Section 2</a></li>
+          <li class=""><a href="#" data-toggle="tab">Section 3</a></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane ks-active" id="1">
@@ -78,9 +78,9 @@
       <pre  class="prettyprint linenums">
 &lt;div class="tabbable" style="margin-bottom: 9px;"&gt;
   &lt;ul class="nav nav-tabs"&gt;
-    &lt;li class="ks-active"&gt;&lt;a href="#1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=""&gt;&lt;a href="#2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=""&gt;&lt;a href="#3" data-toggle="tab"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="ks-active"&gt;&lt;a href="#" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=""&gt;&lt;a href="#" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=""&gt;&lt;a href="#" data-toggle="tab"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;div class="tab-content"&gt;
     &lt;div class="tab-pane ks-active" id="1"&gt;
@@ -114,9 +114,9 @@
           </div>
         </div>
         <ul class="nav nav-tabs">
-          <li class=""><a href="#A" data-toggle="tab">Section 1</a></li>
-          <li class=""><a href="#B" data-toggle="tab">Section 2</a></li>
-          <li class="ks-active"><a href="#C" data-toggle="tab">Section 3</a></li>
+          <li class=""><a href="#" data-toggle="tab">Section 1</a></li>
+          <li class=""><a href="#" data-toggle="tab">Section 2</a></li>
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 3</a></li>
         </ul>
         </div>
         <pre>
@@ -135,9 +135,9 @@
       <p>添加样式<code>.tabs-left</code></p>
       <div class="tabbable tabs-left">
         <ul class="nav nav-tabs">
-          <li class="ks-active"><a href="#lA" data-toggle="tab">Section 1</a></li>
-          <li><a href="#lB" data-toggle="tab">Section 2</a></li>
-          <li><a href="#lC" data-toggle="tab">Section 3</a></li>
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 1</a></li>
+          <li><a href="#" data-toggle="tab">Section 2</a></li>
+          <li><a href="#" data-toggle="tab">Section 3</a></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane ks-active" id="lA">
@@ -167,9 +167,9 @@
       <p>添加样式<code>.tabs-right</code></p>
       <div class="tabbable tabs-right">
         <ul class="nav nav-tabs">
-          <li class="ks-active"><a href="#lA" data-toggle="tab">Section 1</a></li>
-          <li><a href="#lB" data-toggle="tab">Section 2</a></li>
-          <li><a href="#lC" data-toggle="tab">Section 3</a></li>
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 1</a></li>
+          <li><a href="#" data-toggle="tab">Section 2</a></li>
+          <li><a href="#" data-toggle="tab">Section 3</a></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane ks-active" id="lA">
@@ -195,4 +195,31 @@
       </pre>
     </div>
   </div>
+	<div>
+		
+	</div>
+	<script>
+		KISSY.use("datalazyload,switchable", function(S,_,Switchable) {
+			var Tabs = Switchable.Tabs;
+			S.Event.delegate(document,'click','a',function(e){
+				var sender = S.one(e.target);
+				if(sender.attr('href')==='#')
+				{
+					e.halt();
+				}
+			});
+			S.all('.tabbable','#tab').each(function(item){
+				//通过DOM元素demo2新那一个Tab
+				var tabs = new Tabs(item[0], {
+					switchTo : 0,
+					triggerType : 'click',
+					contentCls : 'tab-content',
+					navCls : 'nav-tabs'
+				});
+			});
+			
+			
+
+		});
+	</script>
 </section>
