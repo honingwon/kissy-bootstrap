@@ -83,7 +83,7 @@ KISSY.add('bootstrap/overlayimage',function(S,O){
 		_initOverlay : function(){
 			var _self = this,
 				overlay = new O({
-					content : '<div class="oi-outer"><div class="oi-container"><a href="#" class="close">×</a><img class="oi-img" src="http://placehold.it/500x500"/><div class="oi-nav" style="display: block; "><a class="oi-prev" style="display: block; "></a><a class="oi-next" style="display: block; "></a></div></div>' +
+					content : '<div class="oi-outer"><div class="oi-container"><a href="#" class="close">×</a><img class="oi-img" src="http://placehold.it/500x500"/><a class="oi-prev" style="display: block; "></a><a class="oi-next" style="display: block; "></a></div>' +
 							'<div class="oi-data"><div class="oi-title"></div><div class="oi-numer"></div></div></div>',
 					effect:{
 						effect:'fade', //"fade",

@@ -35,27 +35,29 @@
 }
 
 .oi-prev, .oi-next {
-	width: 49%;
+	width: 50px;
+	top:0;
 	height: 100%;
 	background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-	display: block;
+	position:absolute;
 }
 
 .oi-next {
-	right: 0;
+	right: -50px;
 	float: right;
+	background: url("http://img03.taobaocdn.com/tps/i3/T1xcu1Xl4qXXXoadrh-50-45.png") right 48% no-repeat;
 }
 
 .oi-prev {
-	left: 0;
-	float: left;
+	left: -50px;
+	background: url("http://img04.taobaocdn.com/tps/i4/T1ZOOjXgXKXXXoadrh-50-45.png") left 48% no-repeat;
 }
 
 .oi-prev:hover {
-  background: url("http://img04.taobaocdn.com/tps/i4/T1ZOOjXgXKXXXoadrh-50-45.png") left 48% no-repeat;
+ 
 }
 
 /* line 85, ../sass/lightbox.sass */
 .oi-next:hover {
-  background: url("http://img03.taobaocdn.com/tps/i3/T1xcu1Xl4qXXXoadrh-50-45.png") right 48% no-repeat;
+ 
 }

@@ -14,8 +14,8 @@
 			<li><a href="#tab">tab</a></li>
 			<li><a href="#message">消息提示</a></li>
 			<li><a href="#tooltip">tooltip</a></li>
-			
 			<li><a href="#overlay-image">放大图片</a></li>
+			<li><a href="#autocomplete">autocomplete</a></li>
 		</ul>
 	</div>
 </header>
@@ -35,6 +35,6 @@
 <?php  include("./plug-in/message.php"); ?>
 <?php  include("./plug-in/tooltip.php"); ?>
 <?php  include("./plug-in/overlay-image.php"); ?>
-
+<?php  include("./plug-in/autocomplete.php"); ?>
 
 <?php  include("./templates/footer.php"); ?>

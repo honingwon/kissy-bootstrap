@@ -1,0 +1,22 @@
+.ks-combobox{
+	position:relative;
+	.ks-inline-block;
+	.ks-combobox-button{
+		background-color:@comboxButtonBackground;
+		color:@comboxButtonColor;
+		display:block;
+		position: absolute;
+		right: 6px;
+		top: 5px;
+		width: 15px;
+		text-align: center;
+		height: 18px;
+	}
+	a:hover{
+		text-decoration: none;
+		background-color:spin(@comboxButtonBackground,25%);
+	}
+	.ks-autocomplete-input{
+		margin:0;
+	}
+}
