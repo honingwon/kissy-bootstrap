@@ -12,7 +12,7 @@
     </div>
     <div class="span18">
       <h3>前端分页示例</h3>
-      <div id="J_PageContent" style="border: 1px solid #99BCE8;"></div>
+      <div id="J_PageContent" style="border: 1px solid #ccc;"></div>
       <div id="J_PageBar"></div>
        <pre class="prettyprint linenums">
 &lt;div id="J_PageContent"&gt;&lt;/div&gt;

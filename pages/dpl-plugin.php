@@ -9,6 +9,7 @@
 	<div class="subnav">
 		<ul class="nav nav-pills">
 			<li><a href="#button">按钮</a></li>
+			<li><a href="#menu">菜单</a></li>
 			<li><a href="#pagging">分页</a></li>
 			<li><a href="#dialog">弹出框</a></li>
 			<li><a href="#tab">tab</a></li>
@@ -29,6 +30,7 @@
 	});
 </script>
 <?php  include("./plug-in/button.php"); ?>
+<?php  include("./plug-in/menu.php"); ?>
 <?php  include("./plug-in/pagging.php"); ?>
 <?php  include("./plug-in/dialog.php"); ?>
 <?php  include("./plug-in/tab.php"); ?>

@@ -17,7 +17,7 @@
 
 // Dropdown arrow/caret
 // --------------------
-.caret, .ks-menu-button-dropdown,.ks-button-dropdown{
+.caret, .ks-menu-button-dropdown,.ks-button-dropdown,.ks-submenu-arrow{
   display: inline-block;
   width: 0;
   height: 0;
@@ -28,18 +28,31 @@
   .opacity(30);
   content: "";
 }
+ 
+.ks-submenu-arrow{
+	overflow:hidden;
+	position:absolute;
+	margin-top: 4px;
+  margin-right: 2px;
+	right:0;
+	border-left:  4px solid @black;
+  border-bottom: 4px solid transparent;
+  border-top:   4px solid transparent;
+}
 
 // Place the caret
 .dropdown .caret {
   margin-top: 8px;
   margin-left: 2px;
 }
+
 .dropdown:hover .caret,
-.open.dropdown .caret {
+.open.dropdown .caret ,
+.ks-menuitem-hover .ks-submenu-arrow{
   .opacity(100);
 }
 
-// The dropdown menu (ul)
+// The menu (ul)
 // ----------------------
 .ks-menu{
   position: absolute;
@@ -47,6 +60,7 @@
   left: 0;
   z-index: @zindexDropdown;
   float: left;
+	outline:none;
   /*display: none; // none by default, but block on "open" of the menu*/
 
   visibility: hidden;//ks-menu use the visibility property
@@ -98,7 +112,10 @@
 	  background-color: @dropdownLinkBackgroundHover;
   }
 }
-
+//sub menu
+.ks-submenu{
+	position: relative;
+}
 // Hover state
 // -----------
 /*.ks-menu li > a:hover,
