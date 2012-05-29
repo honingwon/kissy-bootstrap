@@ -15,10 +15,10 @@
       <script src="assets/js/html5.js"></script>
     <![endif]-->
 <link rel="shortcut icon" href="assets/images/favicon.ico">
-<script src="http://chengyu.taobao.ali.com/kissy_git/kissy1.3/??kissy.js,sizzle.js,switchable.js"></script>
-<!--
-<script src="http://a.tbcdn.cn/s/kissy/1.3.0pr1/??kissy.js,sizzle.js,switchable.js"></script>
+<!--<script src="http://chengyu.taobao.ali.com/kissy_git/kissy1.3/??kissy.js,sizzle.js,switchable.js"></script>
 -->
+<script src="http://a.tbcdn.cn/s/kissy/1.3.0pr1/??kissy.js,sizzle.js,switchable.js"></script>
+
 </head>
 <body>
 

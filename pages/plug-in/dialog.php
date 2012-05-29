@@ -63,7 +63,7 @@ KISSY.use("overlay", function(S, O) {
 	<script>
     KISSY.use("overlay", function(S, O) {
 			var d = new O.Dialog({
-						headerContent: '  <a href="#" class="close">×</a><h3>Modal header</h3>',//1. 指定标题信息，指定关闭按钮
+						headerContent: '  <h3>Modal header</h3>',//1. 指定标题信息，指定关闭按钮
 						bodyContent : S.one('#pop'),//2. 指定弹出框的内容
 						//3. 指定弹出框的操作按钮
 						footerContent : '	<a href="#" class="ks-button ks-button-primary">确定</a><a href="#" class="ks-button">关闭</a>',
@@ -72,14 +72,14 @@ KISSY.use("overlay", function(S, O) {
 							 points: ['cc', 'cc']
 						},
 						mask:true,
-						closable: false
+						closable: true
 					});
 			//4. 处理各种操作
 			d.on('afterRenderUI',function(){
-				d.get('el').one('.close').on('click',function(event){
+				/*d.get('el').one('.close').on('click',function(event){
 					event.halt();
 					d.hide();
-				});
+				});*/
 				d.get('el').all('.ks-button').on('click',function(event){
 					event.halt();
 					d.hide();
