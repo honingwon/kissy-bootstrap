@@ -73,17 +73,25 @@ KISSY.add('bootstrap/overlayimage',function(S,O){
 			var _self = this,
 				el = _self.get('el'),
 				overlay = null;
+				
 			el.delegate('click','.' + CLS_ITEM,function(event){
 				event.halt();
 				var sender = S.one(event.currentTarget);
 				_self._showItem(sender);
+			});
+			
+			S.Event.delegate(document,'click','.ks-ext-mask',function(){
+				overlay = _self.get('overlay');
+				if(overlay){
+					overlay.hide();
+				}
 			});
 		},
 		//初始化overlay
 		_initOverlay : function(){
 			var _self = this,
 				overlay = new O({
-					content : '<div class="oi-outer"><div class="oi-container"><a href="#" class="close">×</a><img class="oi-img" src="http://placehold.it/500x500"/><a class="oi-prev" style="display: block; "></a><a class="oi-next" style="display: block; "></a></div>' +
+					content : '<div class="oi-outer"><div class="oi-container"><img class="oi-img" src="http://placehold.it/500x500"/><a class="oi-prev" style="display: block; "></a><a class="oi-next" style="display: block; "></a></div>' +
 							'<div class="oi-data"><div class="oi-title"></div><div class="oi-numer"></div></div></div>',
 					effect:{
 						effect:'fade', //"fade",
@@ -112,9 +120,7 @@ KISSY.add('bootstrap/overlayimage',function(S,O){
 				prevEl = overlayEl.one('.oi-prev');
 				nextEl = overlayEl.one('.oi-next');
 				imgEl = overlayEl.one('.oi-img');
-				overlayEl.delegate('click','.close',function(event){
-					event.halt();
-					overlay = _self.get('overlay');
+				overlayEl.on('dblclick',function(){
 					overlay.hide();
 				});
 				//前一张图片
