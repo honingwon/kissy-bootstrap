@@ -2,14 +2,14 @@
  * Model and Control for dpl button group render
  * @author dxq613@gmail.com
  */
-KISSY.add('bootstrap/grouprender',function(S,UIBase,Component){
+KISSY.add('bootstrap/grouprender',function(S,Component){
 
 	/**
      * @name DPL.ButtonGroupRender
      * @constructor
      * @extends Button
      */
-	var ButtonGroupRender = UIBase.create(Component.Render,[],{
+	var ButtonGroupRender = Component.define(Component.Render,[],{
 		 createDom:function () {
             // set wai-aria role
             this.get("el")
@@ -18,5 +18,5 @@ KISSY.add('bootstrap/grouprender',function(S,UIBase,Component){
 	});
 	return ButtonGroupRender;
 }, {
-    requires:['uibase', 'component']
+    requires:['component']
 });

@@ -2,14 +2,14 @@
  * Model and Control for dpl button
  * @author dxq613@gmail.com
  */
-KISSY.add("bootstrap/buttongroup",function(S,Button,UIBase,Component,GroupRender){
+KISSY.add("bootstrap/buttongroup",function(S,Button,Component,GroupRender){
 
 	/**
      * @name DPL.ButtonGroup
      * @constructor
      * @extends Button
      */
-	var ButtonGroup = UIBase.create(Component.Container,[],{
+	var ButtonGroup = Component.define(Component.Container,[],{
 		/**
 		* init children before initializer
 		*/
@@ -98,16 +98,14 @@ KISSY.add("bootstrap/buttongroup",function(S,Button,UIBase,Component,GroupRender
 			RADIO : 'radio',
 			CHECK : 'check'
 		}
+	},{
+		xclass : "button-group",
+		priority : 1
 	});
 
 	ButtonGroup.DefaultRender = GroupRender;
 
-	Component.UIStore.setUIConstructorByCssClass("button-group", {
-        priority:Component.UIStore.PRIORITY.LEVEL1,
-        ui:ButtonGroup
-    });
-
 	return ButtonGroup;
 }, {
-    requires:['button','uibase', 'component','./grouprender']
+    requires:['button', 'component','./grouprender']
 });
