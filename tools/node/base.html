@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title><br />
+<b>Notice</b>:  Undefined variable: title in <b>D:\works\Demo\bootstrap\kissy-bootstrap\docs\templates\header.php</b> on line <b>5</b><br />
+</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/dpl.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5.js"></script>
+    <![endif]-->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<!--<script src="http://chengyu.taobao.ali.com/kissy_git/kissy1.3/??kissy.js,sizzle.js,switchable.js"></script>
+-->
+<script src="http://a.tbcdn.cn/s/kissy/1.3.0pr1/??kissy.js,sizzle.js,switchable.js"></script>
+
+</head>
+<body>
+
+	<!-- Navbar
+    ================================================== -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="./index.php">DPL</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li  ><a href="./index.php">概要</a>
+						</li>
+						<li  ><a href="./scaffolding.php">框架</a>
+						</li>
+						<li class="active"><a href="./base.php">基础样式</a>
+						</li>
+						<li ><a href="./interaction.php">交互组件</a>
+						</li>
+						<li  ><a href="./form.php">表单</a>
+						</li>
+						<li ><a href="./table.php">表格</a>
+						</li>
+						<li ><a href="./dpl-plugin.php">DPL 插件</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+<!-- Masthead
+      ================================================== -->
+<header id="overview">
+	<h1>基础样式</h1>
+	<p class="lead">为页面基础元素提供一个清新的适合后台页面的展现。</p>
+	<div class="subnav">
+		<ul class="nav nav-pills">
+			<li><a href="#typography">字体排版</a></li>
+			<li><a href="#label">标签</a></li>
+			<li><a href="#badge">标记</a></li>
+			<li><a href="#breadcrumbs">面包屑</a></li>
+		</ul>
+	</div>
+</header>
+
+<!-- Typography
+================================================== -->
+<section id="typography">
+  <div class="page-header">
+    <h1>字体排版 <small>标题、段落、列表等等</small></h1>
+  </div>
+
+  <h2>标题</h2>
+  <!-- Headings & Paragraph Copy -->
+  <div class="row">
+    <div class="span24">
+      <div class="well">
+        <h1>h1. 标题 1</h1>
+        <h2>h2. 标题 2</h2>
+        <h3>h3. 标题 3</h3>
+        <h4>h4. 标题 4</h4>
+        <h5>h5. 标题 5</h5>
+        <h6>h6. 标题 6</h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blockquotes -->
+  <h2>引用块</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>元素</th>
+        <th>使用方式</th>
+        <th>备注</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>&lt;blockquote&gt;</code>
+        </td>
+        <td>
+          引用其它出处文字块
+        </td>
+        <td>
+          <p><code>cite</code> 属性可以用来标注文字出处。</p>
+          class设置为 <code>.pull-left</code> 或 <code>.pull-right</code> 可以改变浮动的方向。
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code>&lt;small&gt;</code>
+        </td>
+        <td>
+          可选的元素，用来描述引用文字的出处。
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="span24">
+<pre class="prettyprint linenums">
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.&lt;/p&gt;
+  &lt;small&gt;Someone famous&lt;/small&gt;
+&lt;/blockquote&gt;
+</pre>
+    </div>
+  </div><!--/row-->
+
+  <h3>样例</h3>
+  <div class="row">
+    <div class="span12">
+      <p>默认的引用块样式:</p>
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
+        <small>Someone famous in <cite title="">Body of work</cite></small>
+      </blockquote>
+    </div>
+    <div class="span12">
+      <p>通过增加 <code>class="pull-right"</code> 让引用块浮动到右边:</p>
+      <blockquote class="pull-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
+        <small>Someone famous in <cite title="">Body of work</cite></small>
+      </blockquote>
+    </div>
+  </div>
+
+
+  <!-- Lists -->
+  <h2>列表</h2>
+  <div class="row">
+    <div class="span8">
+      <h3>无序列表</h3>
+      <p><code>&lt;ul&gt;</code></p>
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit
+          <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+          </ul>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Aenean sit amet erat nunc</li>
+        <li>Eget porttitor lorem</li>
+      </ul>
+    </div>
+    <div class="span8">
+      <h3>无样式列表</h3>
+      <p><code>&lt;ul class="unstyled"&gt;</code></p>
+      <ul class="unstyled">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit
+          <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+          </ul>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Aenean sit amet erat nunc</li>
+        <li>Eget porttitor lorem</li>
+      </ul>
+    </div>
+    <div class="span8">
+      <h3>有序列表</h3>
+      <p><code>&lt;ol&gt;</code></p>
+      <ol>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit</li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Aenean sit amet erat nunc</li>
+        <li>Eget porttitor lorem</li>
+      </ol>
+    </div>
+  </div><!-- /row -->
+
+</section>
+<!-- Labels
+================================================== -->
+<section id="label">
+	<div class="page-header">
+		<h1>
+			标签 <small>标签和注释文字</small>
+		</h1>
+	</div>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>标签</th>
+				<th>代码</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><span class="label">Default</span>
+				</td>
+				<td><code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>
+				</td>
+			</tr>
+			<tr>
+				<td><span class="label label-success">Success</span>
+				</td>
+				<td><code>&lt;span class="label
+						label-success"&gt;Success&lt;/span&gt;</code>
+				</td>
+			</tr>
+			<tr>
+				<td><span class="label label-warning">Warning</span>
+				</td>
+				<td><code>&lt;span class="label
+						label-warning"&gt;Warning&lt;/span&gt;</code>
+				</td>
+			</tr>
+			<tr>
+				<td><span class="label label-important">Important</span>
+				</td>
+				<td><code>&lt;span class="label
+						label-important"&gt;Important&lt;/span&gt;</code>
+				</td>
+			</tr>
+			<tr>
+				<td><span class="label label-info">Info</span>
+				</td>
+				<td><code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code>
+				</td>
+			</tr>
+			<tr>
+				<td><span class="label label-inverse">Inverse</span>
+				</td>
+				<td><code>&lt;span class="label
+						label-inverse"&gt;Inverse&lt;/span&gt;</code>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<!-- Badges
+================================================== -->
+<section id="badge">
+	<div class="page-header">
+		<h1>
+			标记 <small>指示信息、未完成任务等</small>
+		</h1>
+	</div>
+	<div class="row">
+		<div class="span8">
+			<h3>介绍</h3>
+			<p>标记用来显示指示信息或未完成任务的小组件。在CRM中往往用在任务处理列表或消息提醒上。</p>
+		</div>
+		<!-- /.span -->
+		<div class="span16">
+			<h3>列表</h3>
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>类别</th>
+						<th>样例</th>
+						<th>代码</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Default</td>
+						<td><span class="badge">1</span>
+						</td>
+						<td><code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+						</td>
+					</tr>
+					<tr>
+						<td>Success</td>
+						<td><span class="badge badge-success">2</span>
+						</td>
+						<td><code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+						</td>
+					</tr>
+					<tr>
+						<td>Warning</td>
+						<td><span class="badge badge-warning">4</span>
+						</td>
+						<td><code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+						</td>
+					</tr>
+					<tr>
+						<td>Error</td>
+						<td><span class="badge badge-error">6</span>
+						</td>
+						<td><code>&lt;span class="badge badge-error"&gt;6&lt;/span&gt;</code>
+						</td>
+					</tr>
+					<tr>
+						<td>Info</td>
+						<td><span class="badge badge-info">8</span>
+						</td>
+						<td><code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+						</td>
+					</tr>
+					<tr>
+						<td>Inverse</td>
+						<td><span class="badge badge-inverse">10</span>
+						</td>
+						<td><code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- /.span -->
+	</div>
+	<!-- /.row -->
+</section>
+
+<!-- Breadcrumbs
+================================================== -->
+<section id="breadcrumbs">
+	<div class="page-header">
+		<h1>
+			面包屑 <small>快速找到使用路径</small>
+		</h1>
+	</div>
+
+	<div class="row">
+		<div class="span12">
+			<h3>样例</h3>
+			<ul class="breadcrumb">
+				<li class="active">Home</li>
+			</ul>
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a> <span class="divider">/</span></li>
+				<li class="active">Library</li>
+			</ul>
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a> <span class="divider">/</span></li>
+				<li><a href="#">Library</a> <span class="divider">/</span></li>
+				<li class="active">Data</li>
+			</ul>
+		</div>
+		<div class="span12">
+			<h3>代码</h3>
+			<p>HTML即为带有链接的无序列表。</p>
+			<pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Library&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+		</div>
+	</div>
+
+</section>
+
+<!-- Footer
+      ================================================== -->
+<footer class="footer">
+	<p class="pull-right">
+		<a href="#">回到页头</a>
+	</p>
+	<p>
+		Remixed from <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a> by Taobao FEM.
+	</p>
+	<p>
+		Code licensed under the <a
+			href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache
+			License v2.0</a>. Documentation licensed under <a
+			href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+	</p>
+	<p>
+		Icons from <a href="http://glyphicons.com">Glyphicons Free</a>,
+		licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC
+			BY 3.0</a>.
+	</p>
+</footer>
+
+</div>
+<!-- /container -->
+</body>
+</html>

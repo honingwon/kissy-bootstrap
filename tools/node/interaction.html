@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DPL 交互组件</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/dpl.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="assets/js/html5.js"></script>
+    <![endif]-->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<!--<script src="http://chengyu.taobao.ali.com/kissy_git/kissy1.3/??kissy.js,sizzle.js,switchable.js"></script>
+-->
+<script src="http://a.tbcdn.cn/s/kissy/1.3.0pr1/??kissy.js,sizzle.js,switchable.js"></script>
+
+</head>
+<body>
+
+	<!-- Navbar
+    ================================================== -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="./index.php">DPL</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li  ><a href="./index.php">概要</a>
+						</li>
+						<li  ><a href="./scaffolding.php">框架</a>
+						</li>
+						<li ><a href="./base.php">基础样式</a>
+						</li>
+						<li class="active"><a href="./interaction.php">交互组件</a>
+						</li>
+						<li  ><a href="./form.php">表单</a>
+						</li>
+						<li ><a href="./table.php">表格</a>
+						</li>
+						<li ><a href="./dpl-plugin.php">DPL 插件</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+
+<!-- Masthead
+      ================================================== -->
+<header id="overview">
+	<h1>交互组件</h1>
+	<p class="lead">DPL基于Bootstrap的组件，提供了多种组件。</p>
+	<div class="subnav">
+		<ul class="nav nav-pills">
+			<li><a href="#button">按钮</a></li>
+			<li><a href="#tab">Tab</a></li>
+			<li><a href="#pagination">分页</a></li>
+			<li><a href="#alert">提示框(Alert)</a></li>
+			<li><a href="#dialog">弹出框(Dialog)</a></li>
+			<li><a href="#progress">进度条</a></li>
+			<li><a href="#tips">提示信息(Tips)</a></li>
+			<li><a href="#loading">加载(Loading</a></li>
+		</ul>
+	</div>
+</header>
+<script>
+	KISSY.config({
+		packages:[{
+			name:"bootstrap",
+			tag:"201204271014",
+			path:"./assets/js/"
+		}]
+	});
+</script>
+<!-- Buttons
+================================================== -->
+<section id="buttons">
+  <div class="page-header">
+    <h1>按钮</h1>
+  </div>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>按钮</th>
+        <th>应用的样式（class=""）</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><button class="ks-button" href="#">Default</button></td>
+        <td><code>ks-button</code></td>
+        <td>默认的灰色按钮，并带有渐变色</td>
+      </tr>
+      <tr>
+        <td><button class="ks-button ks-button-primary" href="#">Primary</button></td>
+        <td><code>ks-button ks-button-primary</code></td>
+        <td>提供更深的色度来表明在按钮组中是最重要的行为</td>
+      </tr>
+      <tr>
+        <td><button class="ks-button ks-button-info" href="#">Info</button></td>
+        <td><code>ks-button ks-button-info</code></td>
+        <td>默认样式的一种替代方案</td>
+      </tr>
+      <tr>
+        <td><button class="ks-button ks-button-success" href="#">Success</button></td>
+        <td><code>ks-button ks-button-success</code></td>
+        <td>表示一个成功的或者有积极意义的行为</td>
+      </tr>
+      <tr>
+        <td><button class="ks-button ks-button-warning" href="#">Warning</button></td>
+        <td><code>ks-button ks-button-warning</code></td>
+        <td>表明警告，并需要采取这种行为的操作</td>
+      </tr>
+      <tr>
+        <td><button class="ks-button ks-button-danger" href="#">Danger</button></td>
+        <td><code>ks-button ks-button-danger</code></td>
+        <td>表明一个危险的或者潜在的有消极意义的行为</td>
+      </tr>
+      <tr>
+        <td><button class="ks-button ks-button-inverse" href="#">Inverse</button></td>
+        <td><code>ks-button ks-button-inverse</code></td>
+        <td>深灰色的按钮，默认按钮的一种替代按钮，跟语义无关的操作</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="span8">
+      <h3>按钮的行为</h3>
+      <p>一般而言，按钮仅当链接作为一个行为对象时来使用时。例如“下载”应当为一个按钮，“最近活动”应该是一个链接。</p>
+      <p>按钮的样式可以使用任何标签并添加样式 <code>.ks-button</code> 。但是一般而言你应该仅使用 <code>&lt;a&gt;</code> 和 <code>&lt;button&gt;</code> 元素。</p>
+      
+    </div>
+    <div class="span8">
+      <h3>多种尺寸</h3>
+      <p>你喜欢大的还是小的按钮？添加样式<code>.ks-button-large</code>, <code>.ks-button-small</code>或者 <code>.ks-button-mini</code>实现不同的样式。</p>
+      <p>
+        <button class="ks-button ks-button-large ks-button-primary">Primary action</button>
+        <button class="ks-button ks-button-large">Action</button>
+      </p>
+      <p>
+        <button class="ks-button ks-button-small ks-button-primary">Primary action</button>
+        <button class="ks-button ks-button-small">Action</button>
+      </p>
+      <p>
+        <button class="ks-button ks-button-mini ks-button-primary">Primary action</button>
+        <button class="ks-button ks-button-mini">Action</button>
+      </p>
+      <br>
+      <h3>不可用状态</h3>
+      <p>对于不可用的按钮来说, 分别添加 <code>.disabled</code> 样式给链接和 <code>disabled</code> 属性给 <code>&lt;button&gt;</code>元素。</p>
+      <p>
+        <a href="#" class="ks-button ks-button-large ks-button-primary disabled">Primary link</a>
+        <a href="#" class="ks-button ks-button-large disabled">Link</a>
+      </p>
+      <p style="margin-bottom: 18px;">
+        <button class="ks-button ks-button-large ks-button-primary disabled" disabled="disabled">Primary button</button>
+        <button class="ks-button ks-button-large" disabled>Button</button>
+      </p>
+      <p>
+        <span class="label label-info">警告！</span>
+        我们在这里使用 <code>.disabled</code> 帮助样式, 类似于<code>.active</code>样式， 所以不需要前缀.
+      </p>
+    </div>
+    <div class="span8">
+      <h3>同一个样式，多种标签的实现</h3>
+      <p>使用 <code>.ks-button</code> 样式在以下标签上 <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, 或者 <code>&lt;input&gt;</code> 。</p>
+<form>
+<a class="ks-button" href="#">Link</a>
+<button class="ks-button" type="submit">Button</button>
+<input class="ks-button" type="button" value="Input">
+<input class="ks-button" type="submit" value="Submit">
+</form>
+<pre class="prettyprint linenums">
+&lt;a class="ks-button" href=""&gt;Link&lt;/a&gt;
+&lt;button class="ks-button" type="submit"&gt;
+  Button
+&lt;/button&gt;
+&lt;input class="ks-button" type="button"
+         value="Input"&gt;
+&lt;input class="ks-button" type="submit"
+         value="Submit"&gt;
+</pre>
+      <p>作为一个最佳实践，假如你使用<code>input</code>, 那么就用<code>&lt;input type="submit"&gt;</code> 实现你的按钮来兼容跨浏览器的渲染。</p>
+    </div>
+  </div>
+</section>
+<!-- Button Groups
+================================================== -->
+<section id="buttonGroups">
+  <div class="page-header">
+    <h1>按钮组 <small>将多个按钮组合成工具栏</small></h1>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>按钮组</h3>
+      <p>使用按钮组就是把多个按钮组合成一个复杂的组件。 使用一系列的 <code>&lt;a&gt;</code> 或者 <code>&lt;button&gt;</code> 元素。</p>
+      <h3>最佳实践</h3>
+      <p>我们建议用下面的指引使用按钮组和工具栏:</p>
+      <ul>
+        <li>始终使用相同的元素在一个单一的按钮组, <code>&lt;a&gt;</code> 或者 <code>&lt;button&gt;</code>。</li>
+        <li>不要在同一个按钮组使用不同颜色的按钮。</li>
+        <li>使用图标以补充或代替文本, 但是要适当的添加 alt和title属性。</li>
+      </ul>
+      <p><span class="label label-info">关联内容</span> 按钮组和下拉按钮（见下文）应该被区分开来，下拉按钮应该使用一个下拉图标来表明预期的行为。</p>
+    </div>
+    <div class="span8">
+      <h3>按钮组 示例</h3>
+      <p>使用html展示如何用 <code>&lt;a&gt;</code> 标签构造按钮组:</p>
+      <div class="">
+        <div class="ks-button-group" style="margin: 9px 0;">
+          <button class="ks-button">Left</button>
+          <button class="ks-button">Middle</button>
+          <button class="ks-button">Right</button>
+        </div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="ks-button-group"&gt;
+  &lt;button class="ks-button"&gt;1&lt;/button&gt;
+  &lt;button class="ks-button"&gt;2&lt;/button&gt;
+  &lt;button class="ks-button"&gt;3&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+      <h3>工具栏 示例</h3>
+      <p>将一系列的 <code>&lt;div class="ks-button-group"&gt;</code>放入<code>&lt;div class="ks-button-toolbar"&gt;</code>  组合成更加复杂的组件。</p>
+      <div class="ks-button-toolbar">
+        <div class="ks-button-group">
+          <button class="ks-button">1</button>
+          <button class="ks-button">2</button>
+          <button class="ks-button">3</button>
+          <button class="ks-button">4</button>
+        </div>
+        <div class="ks-button-group">
+          <button class="ks-button">5</button>
+          <button class="ks-button">6</button>
+          <button class="ks-button">7</button>
+        </div>
+        <div class="ks-button-group">
+          <button class="ks-button">8</button>
+        </div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="ks-button-toolbar"&gt;
+  &lt;div class="ks-button-group"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>复选和单选</h3>
+      <p>按钮组可以实现复选框和单选框的功能，当只有一个按钮能被选中时可以用作单选框，多个按钮可以选中时用作复选框. 参考 <a href="dpl-plugin.php#button">the Javascript docs</a> 查看更多内容。</p>
+      <h3>下拉按钮在按钮组中</h3>
+      <p><span class="label label-info">警告!</span> 在工具栏<code>.ks-button-toolbar</code>中使用下拉按钮应该单独的被包含在<code>.ks-button-group</code>。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Split button dropdowns
+================================================== -->
+<section id="buttonDropdowns">
+  <div class="page-header">
+    <h1>下拉按钮 <small>构建支持下拉菜单的按钮组</small></h1>
+  </div>
+
+  <h2>下拉按钮</h2>
+  <div class="row">
+    <div class="span8">
+      <h3>概述和示例</h3>
+      <p>使用按钮代替下拉菜单，设置class <code>.ks-button-group</code> 和合适的标签。</p>
+      <div class="ks-button-toolbar" style="margin-top: 18px;">
+       
+          <div class="ks-button dropdown-toggle">Action
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+       
+          <div class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown">Action 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+       
+          <div class="ks-button ks-button-danger dropdown-toggle" data-toggle="dropdown">
+          Danger 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+          
+
+      </div>
+      <div class="ks-button-toolbar">
+          <div class="ks-button ks-button-warning dropdown-toggle" data-toggle="dropdown">
+          Warning 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+          <div class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown">Success
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+          <div class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown">Info 
+              <ul class="ks-menu ks-popupmenu">
+                <li class="ks-menuitem">Action</li>
+                <li class="ks-menuitem">Another action</li>
+                <li class="ks-menuitem">Something else here</li>
+              </ul>
+          </div>
+          <div class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown">Inverse 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+      </div><!-- /ks-button-toolbar -->
+    </div>
+    <div class="span16">
+      <h3>示例</h3>
+      <p>类似于按钮组，我们使用通用的按钮标签和一些重新定义了的样式来支持kissy的DPL插件.</p>
+<pre class="prettyprint linenums">
+&lt;div class="ks-button dropdown-toggle"&gt;Action
+  &lt;ul class="ks-menu ks-popupmenu"&gt;
+    &lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+    &lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+    &lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>可以适用于各种尺寸的按钮</h3>
+      <p>下拉按钮适用于多种尺寸大小. 你可以定义 <code>.ks-button-large</code>, <code>.ks-button-small</code>, 或者 <code>.ks-button-mini</code>三种类型。</p>
+      <div class="ks-button-toolbar" style="margin-top: 18px;">
+          <div class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown">Large button 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+          
+
+          <div class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown">Small button 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+          <div class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown">Mini button 
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+
+      </div><!-- /ks-button-toolbar -->
+    </div><!--/span-->
+    <div class="span8">
+      <h3>javascript 依赖</h3>
+      <p>下拉按钮依赖于<a href="dpl-plugin.php#drowpButton">DPL 下拉按钮插件</a>。</p>
+      <p>在某些情形下&mdash;利于移动设备&mdash;下拉按钮可能会超出当前的可视区域. 你需要手动或者使用javascript的方式解决屏幕的自适应问题。</p>
+    </div><!--/span-->
+  </div><!--/row-->
+  <br>
+
+  <h2>分离式下拉按钮</h2>
+  <div class="row">
+    <div class="span8">
+      <h3>概述和示例</h3>
+      <p>在分组按钮的样式和标签基础上我们可以很容易的创建分离式下拉按钮。分离式下拉按钮左边部分有标准的按钮功能，右边部分有一个下拉菜单。</p>
+      <div class="ks-button-toolbar" style="margin-top: 18px;">
+        <div class="ks-button-group">
+          <div class="ks-button">Action</div>
+          <div class="ks-button dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+        </div><!-- /ks-button-group -->
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-primary">Action</div>
+          <div class="ks-button ks-button-primary dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+          
+        </div><!-- /ks-button-group -->
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-danger">Danger</div>
+          <div class="ks-button ks-button-danger dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+          
+        </div><!-- /ks-button-group -->
+      </div>
+      <div class="ks-button-toolbar">
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-warning">Warning</div>
+          <div class="ks-button ks-button-warning dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+         
+        </div><!-- /ks-button-group -->
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-success">Success</div>
+          <div class="ks-button ks-button-success dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+          
+        </div><!-- /ks-button-group -->
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-info">Info</div>
+          <div class="ks-button ks-button-info dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+        </div><!-- /ks-button-group -->
+      </div>
+      <div class="ks-button-toolbar">
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-inverse">Inverse</div>
+          <div class="ks-button ks-button-inverse dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+        </div><!-- /ks-button-group -->
+      </div><!-- /ks-button-toolbar -->
+      <h3>尺寸</h3>
+      <p>可以设置额外的按钮样式<code>.ks-button-mini</code>, <code>.ks-button-small</code>, 或者 <code>。ks-button-large</code> 来定义按钮的大小</p>
+      <div class="ks-button-toolbar">
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-large">Large action</div>
+          <div class="ks-button ks-button-large dropdown-toggle" >
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+          
+        </div><!-- /ks-button-group -->
+      </div><!-- /ks-button-toolbar -->
+      <div class="ks-button-toolbar">
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-small">Small action</div>
+          <div class="ks-button ks-button-small dropdown-toggle" >
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+        </div><!-- /ks-button-group -->
+      </div><!-- /ks-button-toolbar -->
+      <div class="ks-button-toolbar">
+        <div class="ks-button-group">
+          <div class="ks-button ks-button-mini">Mini action</div>
+          <div class="ks-button ks-button-mini dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+        </div><!-- /ks-button-group -->
+      </div><!-- /ks-button-toolbar -->
+
+    </div>
+    <div class="span16">
+      <h3>标签示例</h3>
+      <p>我们利用第二个按钮动作扩展了下拉按钮，点击右边图标时触发。</p>
+<pre class="prettyprint linenums">
+&lt;div class="ks-button-group"&gt;
+  &lt;div class="ks-button ks-button-mini"&gt;Mini action&lt;/div&gt;
+  &lt;div class="ks-button ks-button-mini dropdown-toggle"&gt;
+    &lt;ul class="ks-menu ks-popupmenu"&gt;
+      &lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+      &lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+      &lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      <h3>展示向上的菜单</h3>
+      <p>可以通过在<code>.ks-menu</code>的父元素上添加一个样式将下拉菜单在按钮的下部调整到按钮上方。这将更改右边图标<code>.ks-button-dropdown</code>的方向 同时重新定位菜单的位置，将菜单从按钮的下面移动到上方。</p>
+      <div class="ks-button-toolbar" style="margin-top: 9px;">
+        <div class="ks-button-group dropup">
+          <div class="ks-button">Dropup</div>
+          <div class="ks-button dropdown-toggle">
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+        </div><!-- /ks-button-group -->
+        <div class="ks-button-group dropup">
+          <div class="ks-button primary">Right dropup</div>
+          <div class="ks-button primary dropdown-toggle" >
+            <ul class="ks-menu ks-popupmenu">
+              <li class="ks-menuitem">Action</li>
+              <li class="ks-menuitem">Another action</li>
+              <li class="ks-menuitem">Something else here</li>
+            </ul>
+          </div>
+          
+        </div><!-- /ks-button-group -->
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="ks-button"&gt;Dropup&lt;/div&gt;
+&lt;div class="ks-button dropdown-toggle"&gt;
+	&lt;ul class="ks-menu ks-popupmenu"&gt;
+		&lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
+		&lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
+		&lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+    </div>
+  </div>
+  <script>
+    KISSY.use('button,menubutton',function(S,Button,MenuButton){
+      S.all('.dropdown-toggle','#buttonDropdowns').each(function(item){
+        
+        var parent = item.parent(),
+						mbtn = new MenuButton({
+							srcNode : item
+						});
+        if(parent.hasClass('ks-button-group')){
+          var prev = item.prev('.ks-button'),
+              btn = new Button({srcNode : prev});
+					if(parent.hasClass('dropup')){
+						mbtn.set('menuAlign',{ points: ['tl','bl']});
+					}
+          new Button.Split({
+            first:btn,
+            second : mbtn
+          }).render();
+        }else{
+          mbtn.render();
+        }
+      });
+    });
+  </script>
+</section>
+
+<section id="tab">
+  <div class="page-header">
+    <h1>Tabs <small>切换页面内容的组件</small></h1>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>Tabs</h3>
+      <p>Tabs 分为导航和内容2部分，主要用于展示相同类型的内容，用于页面内或页面间切换</p>
+      <h3>对齐方式</h3>
+      <p>可以使用<code>.pull-left</code>或者<code>.pull-right</code>设置导航链接的对齐方式</p>
+    </div>
+    <div class="span16">
+      <h3>Tabs简单示例</h3>
+      <p>使用基本的<code>&lt;ul&gt;</code>组织链接，同时添加样式<code>.nav-tabs</code></p>
+      <ul class="nav nav-tabs">
+        <li class="ks-active pull-left"><a href="#">Home</a></li>
+        <li class="pull-left"><a href="#">Profile</a></li>
+        <li class="pull-left"><a href="#">Messages</a></li>
+      </ul>
+      <pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="ks-active pull-left"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="pull-left"&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="pull-left"&gt;&lt;a href="#"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+      </pre>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>Tabs纵向排列</h3>
+      <p>Tabs的导航默认横向排列，可以通过添加样式<code>.nav-stacked</code>的方式，使之看起来像一个纵向排列的堆栈</p>
+    </div>
+    <div class="span16">
+      <h3>纵向排列示例</h3>
+      <ul class="nav nav-tabs nav-stacked">
+        <li class="ks-active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+  &lt;li class="ks-active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+      </pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>Tabs可切换插件</h3>
+      <p>为了使Tab能够切换，添加了KISSY的插件。KISSY DPL插件，有种样式可供选择</p>
+      <p>选择不同方式，仅需要更改少量标签</p>
+    </div>
+    <div class="span16">
+      <h3>可切换Tabs示例</h3>
+      <p>为了使Tabs可以切换，在<code>.nav-tabs</code>的外层包装一层 div 并添加样式<code>.tabbable</code></p>
+      <div class="tabbable" style="margin-bottom: 9px;">
+        <ul class="nav nav-tabs">
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 1</a></li>
+          <li class=""><a href="#" data-toggle="tab">Section 2</a></li>
+          <li class=""><a href="#" data-toggle="tab">Section 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane ks-active" id="1">
+          <p>I'm in Section 1.</p>
+          </div>
+          <div class="tab-pane" id="2">
+          <p>Howdy, I'm in Section 2.</p>
+          </div>
+          <div class="tab-pane" id="3">
+          <p>What up girl, this is Section 3.</p>
+          </div>
+        </div>
+        </div>
+      <pre  class="prettyprint linenums">
+&lt;div class="tabbable" style="margin-bottom: 9px;"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="ks-active"&gt;&lt;a href="#" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=""&gt;&lt;a href="#" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=""&gt;&lt;a href="#" data-toggle="tab"&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane ks-active" id="1"&gt;
+    &lt;p&gt;I'm in Section 1.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="2"&gt;
+    &lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="3"&gt;
+    &lt;p&gt;What up girl, this is Section 3.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>Tabs导航在下面</h3>
+      <p>更改HTML标签的顺序，并且添加样式<code>.tabs-below</code>，使导航在下面</p>
+      <div class="tabbable tabs-below">
+        <div class="tab-content">
+          <div class="tab-pane" id="A">
+          <p>I'm in Section A.</p>
+          </div>
+          <div class="tab-pane" id="B">
+          <p>Howdy, I'm in Section B.</p>
+          </div>
+          <div class="tab-pane ks-active" id="C">
+          <p>What up girl, this is Section C.</p>
+          </div>
+        </div>
+        <ul class="nav nav-tabs">
+          <li class=""><a href="#" data-toggle="tab">Section 1</a></li>
+          <li class=""><a href="#" data-toggle="tab">Section 2</a></li>
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 3</a></li>
+        </ul>
+        </div>
+        <pre>
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;!-- tab content--&gt;
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;!-- tab navs--&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+        </pre>
+    </div>
+    <div class="span8">
+      <h3>Tabs 导航在左侧</h3>
+      <p>添加样式<code>.tabs-left</code></p>
+      <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 1</a></li>
+          <li><a href="#" data-toggle="tab">Section 2</a></li>
+          <li><a href="#" data-toggle="tab">Section 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane ks-active" id="lA">
+            <p>I'm in Section A.</p>
+          </div>
+          <div class="tab-pane" id="lB">
+            <p>Howdy, I'm in Section B.</p>
+          </div>
+          <div class="tab-pane" id="lC">
+            <p>What up girl, this is Section C.</p>
+          </div>
+        </div>
+      </div>
+      <pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+     &lt;!-- tab content--&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+     &lt;!-- tab navs--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+    <div class="span8">
+      <h3>Tabs 导航在右侧</h3>
+      <p>添加样式<code>.tabs-right</code></p>
+      <div class="tabbable tabs-right">
+        <ul class="nav nav-tabs">
+          <li class="ks-active"><a href="#" data-toggle="tab">Section 1</a></li>
+          <li><a href="#" data-toggle="tab">Section 2</a></li>
+          <li><a href="#" data-toggle="tab">Section 3</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane ks-active" id="lA">
+            <p>I'm in Section A.</p>
+          </div>
+          <div class="tab-pane" id="lB">
+            <p>Howdy, I'm in Section B.</p>
+          </div>
+          <div class="tab-pane" id="lC">
+            <p>What up girl, this is Section C.</p>
+          </div>
+        </div>
+      </div>
+      <pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+     &lt;!-- tab content--&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+     &lt;!-- tab navs--&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+  </div>
+	<div>
+		
+	</div>
+	<script>
+		KISSY.use("datalazyload,switchable", function(S,_,Switchable) {
+			var Tabs = Switchable.Tabs;
+			S.Event.delegate(document,'click','a',function(e){
+				var sender = S.one(e.target);
+				if(sender.attr('href')==='#')
+				{
+					e.halt();
+				}
+			});
+			S.all('.tabbable','#tab').each(function(item){
+				//通过DOM元素demo2新那一个Tab
+				var tabs = new Tabs(item[0], {
+					switchTo : 0,
+					triggerType : 'click',
+					contentCls : 'tab-content',
+					navCls : 'nav-tabs'
+				});
+			});
+			
+			
+
+		});
+	</script>
+</section><!-- Pagination
+================================================== -->
+<section id="pagination">
+  <div class="page-header">
+    <h1>分页栏 <small>2种分页选择</small></h1>
+  </div>
+
+  <h2>多页分页</h2>
+  <div class="row">
+    <div class="span8">
+      <h3>有状态的页链接</h3>
+      <p>链接根据当前页的状态使用了了合适的样式，例如当页面不能点击时使用<code>.disabled</code>样式；当前页使用<code>.active</code>样式。</p>
+      <h3>灵活的对齐方式</h3>
+      <p>可以再分页的链接上添加2种样式，改变文字的对齐方式：<code>.pagination-centered</code> 和<code>.pagination-right</code>。</p>
+    </div>
+    <div class="span8">
+      <h3>示例</h3>
+      <p>默认的分页组件是一个灵活的使用数字变量的组件.</p>
+      <div class="pagination">
+        <ul>
+          <li class="disabled"><a href="#">&laquo;</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <ul>
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">10</a></li>
+          <li class="active"><a href="#">11</a></li>
+          <li><a href="#">12</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <ul>
+          <li><a href="#">&larr;</a></li>
+          <li class="active"><a href="#">10</a></li>
+          <li class="disabled"><a href="#">...</a></li>
+          <li><a href="#">20</a></li>
+          <li><a href="#">&rarr;</a></li>
+        </ul>
+      </div>
+      <div class="pagination pagination-centered">
+        <ul>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="span8">
+      <h3>HTML 标签</h3>
+      <p>分页栏是一个封装在<code>&lt;div&gt;</code>中的<code>&lt;ul&gt;</code>列表。</p>
+<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li>
+    &lt;li class="active"&gt;
+      &lt;a href="#"&gt;1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li>
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+
+  <h2>简单分页栏 <small>仅使用下一页和上一页</small></h2>
+  <div class="row">
+    <div class="span8">
+      <h3>关于简单分页栏</h3>
+      <p>简单分页栏使用一些非常简单的标签和轻量的样式来实现，这非常适用于博客和新闻之类的简单网站。</p>
+      <h4>可选的禁用状态</h4>
+      <p>简单分页栏跟一般分页栏一样可以使用 <code>.disabled</code>样式。</p>
+    </div>
+    <div class="span8">
+      <h3>示例</h3>
+      <p>简单分页栏是文本默认居中的链接。</p>
+      <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Previous&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Next&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>链接的对其方式</h3>
+      <p>作为一种选择，你可以将链接分别对其两边：</p>
+      <ul class="pager">
+        <li class="previous"><a href="#">&larr; Older</a></li>
+        <li class="next"><a href="#">Newer &rarr;</a></li>
+      </ul>
+<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;
+    &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+    &lt;a href="#"&gt;Newer &amp;rarr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    </div>
+  </div><!-- /row -->
+</section>
+
+
+<!-- Alerts & Messages
+================================================== -->
+<section id="alert">
+  <div class="page-header">
+    <h1>提示信息（Alerts）<small>成功、警告和错误提示</small></h1>
+  </div>
+  <div class="row">
+    <div class="span8">
+      <h3>简单统一的信息提示</h3>
+      <p>Alert主要包含2部分，关闭Icon（可选）和内容，外层用一个div包含并添加样式 <code>.alert-block</code>.</p>
+      <hr>
+      <h3>KISSY DPL 插件的支持</h3>
+      <p>使用KISSY 的DPL插件可以使Alert具有关闭、拖动等功能</p>
+      <p><a class="ks-button js-btn" href="dpl-plugin.php#message">获取 plugin &raquo;</a></p>
+    </div>
+    <div class="span16">
+      <h3>示例</h3>
+      <p>警告提示，包含提示信息和可选的关闭图标。</p>
+      <div class="alert">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
+&lt;/div&gt;
+</pre>
+      <p>可以简单的对Alert进行扩展:使用样式 <code>.alert-block</code> 可以增加额外的Padding;使用 <code>.alert-heading</code>可以添加标题。</p>
+      <div class="alert alert-block">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <h4 class="alert-heading">Warning!</h4>
+        <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
+  &lt;h4 class="alert-heading"&gt;Warning!&lt;/h4&gt;
+  Best check yo self, you're not...
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span8">
+      <h3>错误</h3>
+      <div class="alert alert-error">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-error"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>成功</h3>
+      <div class="alert alert-success">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-success"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>提示</h3>
+      <div class="alert alert-info">
+        <a class="close" data-dismiss="alert">&times;</a>
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-info"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+<script>
+	KISSY.use('bootstrap/message',function(S,Message){
+		S.all('.alert','#alert').each(function(item){
+			new Message({srcNode : item});
+		});
+		
+	});
+</script>
+</section>
+<!-- Progress bars
+================================================== -->
+<section id="dialog">
+  <div class="page-header">
+    <h1>Dialog <small>模态窗口</small></h1>
+  </div>
+	<div class="row">
+		<div class="span8">
+			<h3>关于模态窗口</h3>
+			<p>一般用于显示详细信息、添加/编辑文本和进行某种确认，当显示模态窗口时，为了防止编辑原有页面的内容会添加一个屏蔽层</p>
+			<p>模态窗口要配合KISSY DPL的插件使用</p>
+		</div>
+		<div class="span16">
+			<h3>示例</h3>
+			<p>你可以简单的利用javascript插件实现一个模态窗口，仅需要在HTML标签中配置 <code>data-toggle="modal"</code> 作为触发模态窗口的控制器，同时指定 <code>data-target="#foo"</code> 或者 <code>href="#foo"</code> 来关联要弹出的元素的ID，这些内容将显示在模态对话框中。</p>
+			<p>同时，配置模态窗口的配置项，可以在控制器或者模态窗口的标签上配置一些数据。</p>
+		<div class="well modal-example" style="background-color: #888; border: none;">
+			<div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
+				<div class="modal-header">
+					<a href="#" class="close" data-dismiss="modal">×</a>
+					<h3>Modal header</h3>
+				</div>
+				<div class="modal-body">
+					<p>One fine body…</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="ks-button">Close</a>
+					<a href="#" class="ks-button ks-button-primary">Save changes</a>
+				</div>
+			</div>
+		</div>
+					
+<pre class="prettyprint linenums">
+&lt;a class="ks-button" data-toggle="modal" href="#myModal" &gt;Launch Modal&lt;/a&gt;
+</pre>
+
+<pre class="prettyprint linenums">
+&lt;div class="modal" id="myModal"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;a class="close" data-dismiss="modal"&gt;&times;&lt;/a&gt;
+    &lt;h3&gt;Modal header&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;One fine body…&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;a href="#" class="ks-button"&gt;Close&lt;/a&gt;
+    &lt;a href="#" class="ks-button ks-button-primary"&gt;Save changes&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			
+		</div>
+	</div>
+</section>
+<!-- Progress bars
+================================================== -->
+<section id="progress">
+  <div class="page-header">
+    <h1>进度条<small>进行加载、渲染和动作时使用的组件</small></h1>
+  </div>
+
+  <h2>示例和标签</h2>
+  <div class="row">
+    <div class="span8">
+      <h3>基本示例</h3>
+      <p>默认的进度条有垂直的渐变色。</p>
+      <div class="progress">
+        <div class="bar" style="width: 60%;"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress"&gt;
+  &lt;div class="bar"
+       style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>有条纹的进度条</h3>
+      <p>使用渐变创建条纹效果（IE不支持）。</p>
+      <div class="progress progress-striped">
+        <div class="bar" style="width: 20%;"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped"&gt;
+  &lt;div class="bar"
+       style="width: 20%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="span8">
+      <h3>有动画效果的进度条</h3>
+      <p>使用有条纹的进度条，并添加动画效果(IE不支持)。</p>
+      <div class="progress progress-striped active">
+        <div class="bar" style="width: 45%"></div>
+      </div>
+<pre class="prettyprint linenums">
+&lt;div class="progress progress-striped
+     active"&gt;
+  &lt;div class="bar"
+       style="width: 40%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+  </div>
+
+  <h2>可选项和浏览器支持</h2>
+  <div class="row">
+    <div class="span6">
+      <h3>额外的颜色支持</h3>
+      <p>进度条使用许多跟按钮和信息提示一致的样式，保证系统的一致性。</p>
+      <div class="progress progress-info" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 20%"></div>
+      </div>
+      <div class="progress progress-success" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 40%"></div>
+      </div>
+      <div class="progress progress-warning" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 60%"></div>
+      </div>
+      <div class="progress progress-danger" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 80%"></div>
+      </div>
+    </div>
+     <div class="span6">
+      <h3>有条纹的进度条</h3>
+      <p>类似于固定颜色的进度条，条纹的颜色也有多种选择。</p>
+      <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 20%"></div>
+      </div>
+      <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 40%"></div>
+      </div>
+      <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 60%"></div>
+      </div>
+      <div class="progress progress-danger progress-striped" style="margin-bottom: 9px;">
+        <div class="bar" style="width: 80%"></div>
+      </div>
+    </div>
+    <div class="span6">
+      <h3>行为</h3>
+      <p>进度条使用CSS3转换，如果你使用Javascript操作动态宽度的进度条，这会非常容易的改变尺寸。</p>
+      <p>加入你使用 <code>.active</code>样式，你使用样式 <code>.progress-striped</code> 后，进度条将产生从左到右的动画效果。</p>
+    </div>
+    <div class="span6">
+      <h3>浏览器支持</h3>
+      <p>进度条使用css3的渐变、转换和动画实现视觉效果。这些特性在Ie7-9中或者老的fifox版本中不支持。</p>
+      <p>Opera 和 IE 浏览器现在不支持动画效果。</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- Tips -->
+<section id="tips">
+	<div class="page-header">
+    <h1>Tips <small>鼠标移动到元素上的信息提示</small></h1>
+  </div>
+	<div class="row">
+		<div class="span8">
+			<h3>关于Tips</h3>
+			<p>其实就是ToolTips,当鼠标移动到某些元素上时显示的文本框，用于解释当前元素或者显示更详细的信息。</p>
+			<p>对于HTML元素而言，在属性中添加 <code>title=""</code>时会出现ToolTips效果，我们重写了系统的默认样式，所以必须以javascript的插件引入，具体参考 KISSY DPL 插件 Tips</p>
+		</div>
+		
+		<div class="span16">
+			<h3>示例</h3>
+			<p id="J_Tips" class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="tooltip" title="first tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+			</p>
+			<h3>HTML代码</h3>
+			<p>tooltip的代码是javascript自动生成的，这里显示的是触发元素的HTML</p>
+<pre class="prettyprint linenums">
+	&lt;a href="#" rel="tooltip" title="first tooltip"&gt;hover over me&lt;/a&gt;
+</pre>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span8">
+			<h3>复杂的Tips</h3>
+			<p>如果想在tooltip里添加比较长的文本或者嵌套HTML代码并附加样式的话，必须指定嵌入的HTML,在调用tooltip的插件时配置，详细信息参考KISSY DPL 插件 Tips</p>
+		</div>
+		<div class="span16">
+			<h3>示例</h3>
+			<div style="height:120px;position:relative">
+				<div class="popover fade right in" style="display: block; "><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title">A Title</h3><div class="popover-content"><p>And here's some amazing content. It's very engaging. right?</p></div></div></div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		KISSY.use('bootstrap/tooltip',function(S,Tooltip){
+			Tooltip({selector : '#J_Tips a'});
+		});
+	</script>
+</section><!-- loading -->
+<section id="loading">
+<div class="page-header">
+    <h1>Loading <small>加载数据时的等待</small></h1>
+</div>
+<div class="row">
+	<div class="span8">
+		<h3>关于Loading</h3>
+		<p>Loading 组件主要用于发出请求等待数据时，经常跟mask一起使用，阻止某些操作。</p>
+		<p>该组件需要使用Javascript插件 具体参考 KISSY DPL 插件 loadding</p>
+	</div>
+	<div class="span16">
+		<h3>示例</h3>
+		<div class="well  modal-example" style="position:relative;width:500px;height:300px;background-color: #888;">
+			<div class="loading-wrap">
+				<div class="triangle1"></div>
+				<div class="triangle2"></div>
+				<div class="triangle3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</section><!-- Footer
+      ================================================== -->
+<footer class="footer">
+	<p class="pull-right">
+		<a href="#">回到页头</a>
+	</p>
+	<p>
+		Remixed from <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a> by Taobao FEM.
+	</p>
+	<p>
+		Code licensed under the <a
+			href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache
+			License v2.0</a>. Documentation licensed under <a
+			href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+	</p>
+	<p>
+		Icons from <a href="http://glyphicons.com">Glyphicons Free</a>,
+		licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC
+			BY 3.0</a>.
+	</p>
+</footer>
+
+</div>
+<!-- /container -->
+</body>
+</html>
