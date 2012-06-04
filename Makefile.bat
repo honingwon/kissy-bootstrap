@@ -2,7 +2,6 @@ set BOOTSTRAP_DPL=docs\assets\css\dpl.css
 set BOOTSTRAP_DPL_LESS=less\dpl.less
 set TOOLS_LESS_DIR=tools\less\
 set TOOLS_NODE_DIR=tools\node\
-set SERVER_URL=http://localhost:8080/mykissy/kissy-bootstrap/docs/
 
 ::
 :: Clean
