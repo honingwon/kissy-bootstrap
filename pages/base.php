@@ -1,3 +1,4 @@
+<?php $title="DPL 基础样式"?>
 <?php	 $page = "base" ?>
 <?php include("./templates/header.php"); ?>
 
