@@ -17,8 +17,8 @@
 <link rel="shortcut icon" href="assets/images/favicon.ico">
 <!--<script src="http://chengyu.taobao.ali.com/kissy_git/kissy1.3/??kissy.js,sizzle.js,switchable.js"></script>
 -->
-<script src="../kissy/build/kissy.js,sizzle.js,switchable.js"></script>
-<script src="../kissy/build/sizzle.js,switchable.js"></script>
+<script src="../kissy/build/kissy.js"></script>
+<script src="../kissy/build/sizzle.js"></script>
 <script src="../kissy/build/switchable.js"></script>
 
 </head>
