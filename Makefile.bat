@@ -1,6 +1,9 @@
 set BOOTSTRAP_DPL=docs\assets\css\dpl.css
 set BOOTSTRAP_DPL_LESS=less\dpl.less
 set TOOLS_LESS_DIR=tools\less\
+set TOOLS_NODE_DIR=tools\node\
+set SERVER_URL=http://localhost:8080/bootstrap/kissy-bootstrap/docs/
+
 ::
 :: Clean
 ::
@@ -33,5 +36,6 @@ set TOOLS_LESS_DIR=tools\less\
 	copy pages\templates\*.php docs\templates\
 	copy pages\plug-in\*.php docs\plug-in\
 	copy pages\bussiness\*.php docs\bussiness\
+	node %TOOLS_NODE_DIR%transform -server %SERVER_URL% -path docs\ -to docs\
 	echo Éú³É½áÊø
 	pause

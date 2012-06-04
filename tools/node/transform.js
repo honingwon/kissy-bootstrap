@@ -83,7 +83,7 @@ function transDir(srcPath,toPath){
 		fileName = files[i];
 		filePath = path.join(srcPath,fileName);
 		//如果是文件则转换文件
-		if(fs.statSync(filePath).isFile()){
+		if(fs.statSync(filePath).isFile()&& path.extname(filePath) === fileType){
 			transFile(fileName,filePath,toPath);
 		}
 	}
@@ -95,18 +95,23 @@ function transFile(fileName,filePath,toPath){
 		toFilePath = path.join(toPath,fileName).replace(fileType,toType);
 
 	urlOption.path = url.parse(fileUrl).path;
-	console.log(fileUrl);
-	var writeStream = fs.createWriteStream(toFilePath);
+	console.log('转换文件：' + fileUrl);
+	var writeStream = fs.createWriteStream(toFilePath),
+		regex = /href\s*=\s*[\'\"][^\'\"]*(.php)[^\'\"]*[\'\"]/g,
+		temp = '';
 	//fs.open(, 'w', function(error,fd){
 
 	var req = http.get(urlOption, function(res) {
 		res.setEncoding('utf8');
 		
 		res.on('data', function (chunk) {
-			writeStream.write(chunk);
+			temp += chunk;
 		});
 		res.on('end',function(){
-
+			temp = temp.replace(regex,function(s,$1){
+				return s.replace($1,toType);
+			});;
+			writeStream.write(temp);
 			writeStream.end();
 		});
 		/**/
