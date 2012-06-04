@@ -1,8 +1,11 @@
 var path = require('path'),
 	fs = require('fs'),
 	http = require('http'),
+	//config = require('../../config.js.tpl'),//默认的配置文件
 	url = require('url');
-var serverUrl = '',	//服务器地址，用来请求php（默认）文件
+//console.log(config);
+var transferConfig = null,//配置文件中的配置项
+	serverUrl = '',	//服务器地址，用来请求php（默认）文件
 	urlObj = null,
 	urlOption = {}, //服务器地址格式化
 	srcPath = '',		//源文件所在的目录，默认为当前路径
@@ -26,6 +29,17 @@ process.argv.forEach(function (val, index, array) {
 			break;
 		case '-to'	:
 			toPath = nextVal;
+			break;
+		case '-cf' :
+			if(nextVal){
+				config = require(nextVal);
+				transferConfig = config.transfer;
+				serverUrl = transferConfig.serverUrl || serverUrl;
+				srcPath = transferConfig.srcPath || srcPath;
+				fileType = transferConfig.fileType || fileType;
+				toPath = transferConfig.toPath||toPath;
+				console.log(config);
+			}
 			break;
 		case '-help' : 
 			isHelp = true;
@@ -55,6 +69,7 @@ urlOption = {
 };
 srcPath = path.normalize(srcPath);
 toPath = path.normalize(toPath);
+console.log(srcPath);
 //检测源文件路径是否存在
 path.exists(srcPath,function(exists){
 	if(!exists){
