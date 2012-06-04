@@ -1,4 +1,5 @@
 <?php	 $page = "scaffolding" ?>
+<?php $title="DPL 框架"?>
 <?php include("./templates/header.php"); ?>
 
 <!-- Masthead
