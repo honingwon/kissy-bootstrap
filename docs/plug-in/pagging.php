@@ -22,7 +22,7 @@
  KISSY.use('bootstrap/store,bootstrap/bar',function(S,Store,Bar){
   //数据缓存对象
   var store = new Store({
-    url : 'plug-in/page-data.php'
+    url : 'plug-in/page-data.json'
   });
   //分页控件
   var pb = new Bar.PaggingBar({

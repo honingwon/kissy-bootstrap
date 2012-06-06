@@ -33,7 +33,7 @@ set TOOLS_NODE_DIR=tools\node\
 	copy pages\*.php	docs\
 	copy pages\components\*.php docs\components\
 	copy pages\templates\*.php docs\templates\
-	copy pages\plug-in\*.php docs\plug-in\
+	copy pages\plug-in\*.* docs\plug-in\
 	copy pages\bussiness\*.php docs\bussiness\
 	::node %TOOLS_NODE_DIR%transform -server %SERVER_URL% -path docs\ -to docs\
 	::配置文件的路径相对于 %TOOLS_NODE_DIR%transform.js的路径

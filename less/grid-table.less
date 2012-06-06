@@ -2,6 +2,10 @@
 .ks-grid-table{
 	.table;
 	table-layout:fixed;
+	margin:0;
+	th{
+		padding : 0;
+	}
 }
 //±íÍ·
 .ks-grid-sort-icon{
@@ -9,6 +13,13 @@
 	margin-top:7px;
 	margin-left:3px;
 	display:none;
+}
+
+.ks-grid-hd{
+	
+	.ks-grid-hd-inner{
+		padding: 8px 15px;
+	}
 }
 
 .sort-asc .ks-grid-sort-icon,.sort-desc .ks-grid-sort-icon{
@@ -28,4 +39,14 @@
 //body
 .ks-grid-body{
 	outline:0;
+	.ks-grid-table{
+		border-top-width : 0;
+	}
+}
+.ks-grid-row-first td{
+	border-top-width:0;
+}
+.ks-grid-header-row td{
+	padding:0;
+	border-width:0;
 }
