@@ -3964,8 +3964,31 @@ a.thumbnail:hover {
 .ks-grid-table tbody tr:hover th {
   background-color: #f5f5f5;
 }
-.ks-grid-table th {
+.ks-grid-table th,
+.ks-grid-table td {
   padding: 0;
+  border-top-width: 0;
+  border-bottom: 1px solid #dddddd;
+}
+.ks-grid-table tbody tr:nth-child(odd) td,
+.ks-grid-table tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+.ks-grid-cell-empty,
+.ks-grid-hd-empty {
+  width: 0;
+}
+.ks-grid-width .ks-grid-cell-empty,
+.ks-grid-width .ks-grid-hd-empty {
+  width: auto;
+}
+.ks-grid-header {
+  border: 1px solid #dddddd;
+  border-bottom-width: 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
 }
 .ks-grid-sort-icon {
   display: inline-block;
@@ -3982,7 +4005,12 @@ a.thumbnail:hover {
   margin-left: 3px;
   display: none;
 }
-.ks-grid-hd .ks-grid-hd-inner {
+.ks-grid-table thead:first-child tr:first-child th:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.ks-grid-hd-inner {
   padding: 8px 15px;
 }
 .sort-asc .ks-grid-sort-icon,
@@ -4002,16 +4030,27 @@ a.thumbnail:hover {
 }
 .ks-grid-body {
   outline: 0;
-}
-.ks-grid-body .ks-grid-table {
+  border: 1px solid #dddddd;
   border-top-width: 0;
+  border-bottom-width: 0;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+.ks-grid-cell-inner {
+  padding: 8px 15px;
+}
+.ks-grid-height .ks-grid-body {
+  overflow-x: auto;
+  overflow-y: scroll;
+  border-bottom-width: 1px;
 }
 .ks-grid-row-first td {
   border-top-width: 0;
 }
 .ks-grid-header-row td {
   padding: 0;
-  border-width: 0;
+  border-bottom-width: 0;
 }
 .pull-right {
   float: right;
