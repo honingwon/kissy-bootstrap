@@ -238,9 +238,7 @@ var menu = new Menu.PopupMenu({
     mb1 = new MenuButton({
     content:"淘宝网",
     describedby:"describe",
-    menu:function () {
-        return menu;
-    },
+    menu : menu,
     render:"#J_MButton1"
 });
 
