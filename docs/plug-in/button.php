@@ -229,18 +229,17 @@ var item = event.target;
 &lt;div id="J_MButton1"&gt; &lt;/div&gt; 
         </pre>
         <pre class="prettyprint linenums">
-var menu = new Menu.PopupMenu({
+var mb1 = new MenuButton({
+      content:"淘宝网",
+      describedby:"describe",
+      menu : {xclass : 'popupmenu',
         children:[
-            new Menu.Item({content:"我要买",value:'buy'}),
-            new Menu.Separator(),
-            new Menu.Item({content:"我要卖",value:'sale'})]
-    }),
-    mb1 = new MenuButton({
-    content:"淘宝网",
-    describedby:"describe",
-    menu : menu,
-    render:"#J_MButton1"
-});
+        {xclass : 'menuitem',content:"我要买",value:'buy'},
+        {xclass : 'menuseparator'},
+        {xclass : 'menuitem',content:"我要卖",value:'sale'}
+      ]},
+      render:"#J_MButton1"
+  });
 
 mb1.render();
 mb1.on('click',function(event){
@@ -409,16 +408,16 @@ mb1.on('click',function(event){
 					alert(item.get('el').text());
 				});
 
-				var menu = new Menu.PopupMenu({
-								children:[
-									  new Menu.Item({content:"我要买",value:'buy'}),
-										new Menu.Separator(),
-										new Menu.Item({content:"我要卖",value:'sale'})]
-						}),
-						mb1 = new MenuButton({
+				 
+				var		mb1 = new MenuButton({
 						content:"淘宝网",
 						describedby:"describe",
-						menu : menu,
+						menu : {xclass : 'popupmenu',
+							children:[
+							{xclass : 'menuitem',content:"我要买",value:'buy'},
+							{xclass : 'menuseparator'},
+							{xclass : 'menuitem',content:"我要卖",value:'sale'}
+						]},
 						render:"#J_MButton1"
 				});
 
