@@ -3802,6 +3802,11 @@ a.thumbnail:hover {
 }
 .ks-combobox {
   position: relative;
+  overflow: hidden;
+  border: 1px solid #DDD;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -3839,6 +3844,7 @@ a.thumbnail:hover {
 .ks-combobox .ks-combobox-input {
   margin: 0;
   width: 100%;
+  border-width: 0;
 }
 .oi-container {
   position: relative;
