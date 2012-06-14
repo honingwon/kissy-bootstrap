@@ -1,7 +1,7 @@
 .ks-combobox{
 	position:relative;
 	.ks-inline-block;
-	.ks-combobox-button{
+	.ks-combobox-trigger{
 		background-color:darken(@white,10%);
 		color:@comboxButtonColor;
 		display:block;
@@ -12,11 +12,14 @@
 		text-align: center;
 		height: 18px;
 		cursor:pointer;
-		&:hover .ks-combo-button-inner{
+		&:hover .ks-combobox-trigger-inner{
 			border-top-color: @black;
 		}
+		&:hover{
+			background-color:darken(@white,30%);
+		}
 	}
-	.ks-combo-button-inner{
+	.ks-combobox-trigger-inner{
 		display: block;
 		text-indent: -50px;
 		overflow: hidden;
@@ -28,12 +31,7 @@
 		margin-top: 7px;
 		margin-left: 3px;
 	}
-
-	a:hover{
-		text-decoration: none;
-		background-color:darken(@white,30%);
-	}
-	.ks-autocomplete-input{
+	.ks-combobox-input{
 		margin:0;
 	}
 }

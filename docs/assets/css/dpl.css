@@ -1,5 +1,5 @@
 /*
-* timestap:201205301831
+* timestap:201206140953
 */
 /*!
  * CRM DPL v1.0
@@ -3808,7 +3808,7 @@ a.thumbnail:hover {
   *display: inline;
   *zoom: 1;
 }
-.ks-combobox .ks-combobox-button {
+.ks-combobox .ks-combobox-trigger {
   background-color: #e6e6e6;
   color: #333333;
   display: block;
@@ -3820,10 +3820,13 @@ a.thumbnail:hover {
   height: 18px;
   cursor: pointer;
 }
-.ks-combobox .ks-combobox-button:hover .ks-combo-button-inner {
+.ks-combobox .ks-combobox-trigger:hover .ks-combobox-trigger-inner {
   border-top-color: #000000;
 }
-.ks-combobox .ks-combo-button-inner {
+.ks-combobox .ks-combobox-trigger:hover {
+  background-color: #b3b3b3;
+}
+.ks-combobox .ks-combobox-trigger-inner {
   display: block;
   text-indent: -50px;
   overflow: hidden;
@@ -3835,11 +3838,7 @@ a.thumbnail:hover {
   margin-top: 7px;
   margin-left: 3px;
 }
-.ks-combobox a:hover {
-  text-decoration: none;
-  background-color: #b3b3b3;
-}
-.ks-combobox .ks-autocomplete-input {
+.ks-combobox .ks-combobox-input {
   margin: 0;
 }
 .oi-container {
@@ -3931,6 +3930,9 @@ a.thumbnail:hover {
 .ks-bar-item-text {
   margin-left: 4px;
 }
+.ks-grid {
+  outline: 0;
+}
 .ks-grid-table {
   width: 100%;
   margin-bottom: 18px;
@@ -3969,6 +3971,11 @@ a.thumbnail:hover {
   padding: 0;
   border-top-width: 0;
   border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+.ks-grid-table .ks-grid-cell-empty,
+.ks-grid-table .ks-grid-hd-empty {
+  border-right-width: 0;
 }
 .ks-grid-table tbody tr:nth-child(odd) td,
 .ks-grid-table tbody tr:nth-child(odd) th {
@@ -3980,6 +3987,9 @@ a.thumbnail:hover {
 }
 .ks-grid-width .ks-grid-cell-empty,
 .ks-grid-width .ks-grid-hd-empty {
+  width: auto;
+}
+.ks-grid-height .ks-grid-hd-empty {
   width: auto;
 }
 .ks-grid-header {
@@ -4051,6 +4061,15 @@ a.thumbnail:hover {
 .ks-grid-header-row td {
   padding: 0;
   border-bottom-width: 0;
+}
+.ks-grid .ks-paggingbar {
+  float: right;
+}
+.ks-grid-tbar {
+  padding-bottom: 10px;
+}
+.ks-grid-bbar {
+  padding-top: 10px;
 }
 .pull-right {
   float: right;

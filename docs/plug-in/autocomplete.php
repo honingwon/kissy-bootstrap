@@ -13,28 +13,40 @@
       <h3>suggest 示例</h3>
       <p>使用已有DOM生成autocomplete</p>
       <div>
-        <input id="inp"/>
+				<div class="ks-combobox" id="J_AutoComplete">
+					<div class="ks-combobox-input-wrap">
+            <input class="ks-combobox-input" id="inp"/>
+					</div>
+				</div>
       </div>
       <pre class="prettyprint linenums">
-&lt;input id="inp"/&gt;
+&lt;div class="ks-combobox" id="J_AutoComplete"&gt;
+	&lt;div class="ks-combobox-input-wrap"&gt;
+		&lt;input class="ks-combobox-input" id="inp"/&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
       </pre>
       <pre class="prettyprint linenums">
-KISSY.use('autocomplete',function(S,AutoComplete){
-  var data = ["a123456", "b12345", "c3464356", "d23434"];
+ KISSY.use('combobox',function(S,ComboBox){
+			var data = ["a123456", "b12345", "c3464356", "d23434"];
+			var basicComboBox = new ComboBox({
+					width:100,
+					srcNode:S.one("#J_AutoComplete"),
+					// 初始就聚焦
+					focused:true,
+					hasTrigger:false,
+					dataSource:{
+							data:data,
+							xclass:'combobox-LocalDataSource'
+					}
+			});
+			basicComboBox.render();
 
-  var basicAutoComplete = new AutoComplete.Basic({
-      srcNode:S.one("#inp"),
-      // width:S.one("#inp").css("width"),
-      data:data
-  });
-  basicAutoComplete.render();
-
-  // 得到焦点时展示全部
-  S.one("#inp").on("focus", function () {
-      basicAutoComplete.sendRequest('');
-  });
-
-});
+			// 得到焦点时展示全部
+			S.one("#inp").on("focus", function () {
+					basicComboBox.sendRequest('');
+			});
+    });
       </pre>
       
     </div>
@@ -50,29 +62,38 @@ KISSY.use('autocomplete',function(S,AutoComplete){
 &lt;/div&gt;
       </pre>
       <pre class="prettyprint linenums">
-var basicAutoComplete = new AutoComplete.Basic({
-    render:"#inp_container",
-    // width:S.one("#inp").css("width"),
-    data:data,
-    maxItemCount:3,
-    format:function (query, data) {
-        var ret = [];
-        for (var i = 0; i < data.length; i++) {
-            ret[i] = {
-                content:(data[i] + "")
-                        .replace(new RegExp(S.escapeRegExp(query), "g"),
-                        "<b>$&</b>"),
-                disabled:(i % 2 ? true : false)
-            };
-        }
-        return ret;
-    }
+ KISSY.use('combobox',function(S,ComboBox){
+	var data = ["a123456", "b12345", "c3464356", "d23434"];
+
+	var basicComboBox = new ComboBox({
+			render:"#inp_container",
+			dataSource:{
+					xclass:'combobox-LocalDataSource',
+					data:data
+			},
+			hasTrigger:false,
+			maxItemCount:2,
+			format:function (query, data) {
+					var ret = [];
+					for (var i = 0; i < data.length; i++) {
+							ret[i] = {
+									content:(data[i] + "")
+													.replace(new RegExp(S.escapeRegExp(query), "g"),
+													"&lt;b&gt;$&&lt;/b&gt;"),
+									disabled:(i % 2 ? true : false)
+							};
+					}
+					return ret;
+			}
+	});
+	basicComboBox.render();
+
+	basicComboBox.on("click", function (e) {
+			var item = e.target;
+			S.log(item.get("value") + "\n" + item.get("content") +
+							"\n" + item.get("textContent"));
+	});
 });
-basicAutoComplete.render();
-basicAutoComplete.on("select", function (e) {
-   alert(e.target.get('value'));
-});
-      
       </pre>
     </div>
   </div>
@@ -85,21 +106,32 @@ basicAutoComplete.on("select", function (e) {
       <h3>combox示例</h3>
       <p>利用现有DOM生成combox</p>
       <div>
-        <input type="text" id="inp-combox"/>
+				<div class="ks-combobox" id="J_Combox">
+					<div class="ks-combobox-input-wrap">
+            <input class="ks-combobox-input" id="inp"/>
+					</div>
+				</div>
       </div>
       <pre class="prettyprint linenums">
-          &lt;input type="text" id="inp-combox"/&gt;
+&lt;div class="ks-combobox" id="J_Combox"&gt;
+	&lt;div class="ks-combobox-input-wrap"&gt;
+		&lt;input class="ks-combobox-input" id="inp"/&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
       </pre>
       <pre class="prettyprint linenums">
-KISSY.use('autocomplete',function(S,AutoComplete){
-  var data = ["a123456", "b12345", "c3464356", "d23434"];
+ KISSY.use('combobox',function(S,ComboBox){
+    var data = ["a123456", "b12345", "c3464356", "d23434"];
 
-  var basicAutoComplete = new AutoComplete.BasicComboBox({
-      srcNode:S.one("#inp-combox"),
-      data:data
-  });
-  basicAutoComplete.render();
-});       
+    var basicComboBox = new ComboBox({
+        srcNode:S.one("#J_Combox"),
+        dataSource:{
+							data:data,
+							xclass:'combobox-LocalDataSource'
+				}
+    });
+    basicComboBox.render();
+  });     
       </pre>
     </div>
     <div class="span9">
@@ -114,84 +146,126 @@ KISSY.use('autocomplete',function(S,AutoComplete){
         &lt;/div&gt;
       </pre>
       <pre class="prettyprint linenums">
+KISSY.use('combobox',function(S,ComboBox){
+	var data = ["a123456", "b12345", "c3464356", "d23434"];
 
+	var basicComboBox = new ComboBox({
+				render:"#inp-combox-container",
+				dataSource:{
+						xclass:'combobox-LocalDataSource',
+						data:data
+				},
+				maxItemCount:5,
+				format:function (query, data) {
+						var ret = [];
+						for (var i = 0; i < data.length; i++) {
+								ret[i] = {
+										content:(data[i] + "")
+														.replace(new RegExp(S.escapeRegExp(query), "g"),
+														"&lt;b&gt;$&&lt;/b&gt;"),
+										disabled:(i % 2 ? true : false)
+								};
+						}
+						return ret;
+				}
+		});
+		basicComboBox.render();
+});
       </pre>
     </div>
   </div>
 <script>
-    KISSY.use('autocomplete',function(S,AutoComplete){
-      var data = ["a123456", "b12345", "c3464356", "d23434"];
+/**/
+    KISSY.use('combobox',function(S,ComboBox){
+			var data = ["a123456", "b12345", "c3464356", "d23434"];
+			var basicComboBox = new ComboBox({
+					srcNode:S.one("#J_AutoComplete"),
+					// 初始就聚焦
+					focused:true,
+					hasTrigger:false,
+					dataSource:{
+							data:data,
+							xclass:'combobox-LocalDataSource'
+					}
+			});
+			basicComboBox.render();
 
-      var basicAutoComplete = new AutoComplete.Basic({
-          srcNode:S.one("#inp"),
-          // width:S.one("#inp").css("width"),
-          data:data
-      });
-      basicAutoComplete.render();
-
-      // 得到焦点时展示全部
-      S.one("#inp").on("focus", function () {
-          basicAutoComplete.sendRequest('');
-      });
+			// 得到焦点时展示全部
+			S.one("#inp").on("focus", function () {
+					basicComboBox.sendRequest('');
+			});/**/
     });
 
-    KISSY.use('autocomplete',function(S,AutoComplete){
-      var data = ["a123456", "b12345", "c3464356", "d23434"];
-      var basicAutoComplete = new AutoComplete.Basic({
-          render:"#inp_container",
-          // width:S.one("#inp").css("width"),
-          data:data,
-          maxItemCount:2,
-          format:function (query, data) {
-              var ret = [];
-              for (var i = 0; i < data.length; i++) {
-                  ret[i] = {
-                      content:(data[i] + "")
-                              .replace(new RegExp(S.escapeRegExp(query), "g"),
-                              "<b>$&</b>"),
-                      disabled:(i % 2 ? true : false)
-                  };
-              }
-              return ret;
-          }
-      });
-      basicAutoComplete.render();
+    KISSY.use('combobox',function(S,ComboBox){
+			var data = ["a123456", "b12345", "c3464356", "d23434"];
 
-      basicAutoComplete.on("select", function (e) {
-         alert(e.target.get('value'));
-      });
+			var basicComboBox = new ComboBox({
+					render:"#inp_container",
+					// width:S.one("#inp").css("width"),
+					dataSource:{
+							xclass:'combobox-LocalDataSource',
+							data:data
+					},
+					hasTrigger:false,
+					maxItemCount:2,
+					format:function (query, data) {
+							var ret = [];
+							for (var i = 0; i < data.length; i++) {
+									ret[i] = {
+											content:(data[i] + "")
+															.replace(new RegExp(S.escapeRegExp(query), "g"),
+															"<b>$&</b>"),
+											disabled:(i % 2 ? true : false)
+									};
+							}
+							return ret;
+					}
+			});
+			basicComboBox.render();
+
+			basicComboBox.on("click", function (e) {
+					var item = e.target;
+					S.log(item.get("value") + "\n" + item.get("content") +
+									"\n" + item.get("textContent"));
+			});
     });
 
-  KISSY.use('autocomplete',function(S,AutoComplete){
+  KISSY.use('combobox',function(S,ComboBox){
     var data = ["a123456", "b12345", "c3464356", "d23434"];
 
-    var basicAutoComplete = new AutoComplete.BasicComboBox({
-        srcNode:S.one("#inp-combox"),
-        data:data
+    var basicComboBox = new ComboBox({
+        srcNode:S.one("#J_Combox"),
+        dataSource:{
+							data:data,
+							xclass:'combobox-LocalDataSource'
+				}
     });
-    basicAutoComplete.render();
-  });
-  KISSY.use('autocomplete',function(S,AutoComplete){
+    basicComboBox.render();
+  });/**/
+  KISSY.use('combobox',function(S,ComboBox){
 		var data = ["a123456", "b12345", "c3464356", "d23434"];
-    var basicAutoComplete = new AutoComplete.BasicComboBox({
-        render:"#inp-combox-container",
-        // width:S.one("#inp").css("width"),
-        data:data,
-        maxItemCount:5,
-        format:function (query, data) {
-            var ret = [];
-            for (var i = 0; i < data.length; i++) {
-                ret[i] = {
-                    content:(data[i] + "")
-                            .replace(new RegExp(S.escapeRegExp(query), "g"),
-                            "<b>$&</b>"),
-                    disabled:(i%2?true:false)
-                };
-            }
-            return ret;
-        }
-    });
-    basicAutoComplete.render();
+
+		var basicComboBox = new ComboBox({
+					render:"#inp-combox-container",
+					dataSource:{
+							xclass:'combobox-LocalDataSource',
+							data:data
+					},
+					maxItemCount:5,
+					format:function (query, data) {
+							var ret = [];
+							for (var i = 0; i < data.length; i++) {
+									ret[i] = {
+											content:(data[i] + "")
+															.replace(new RegExp(S.escapeRegExp(query), "g"),
+															"<b>$&</b>"),
+											disabled:(i % 2 ? true : false)
+									};
+							}
+							return ret;
+					}
+			});
+			basicComboBox.render();
   });
 </script>
 </section>

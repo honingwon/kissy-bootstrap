@@ -1,4 +1,9 @@
 
+
+.ks-grid{
+	outline:0;
+}
+
 .ks-grid-table{
 	.table;
 	table-layout:fixed;
@@ -7,8 +12,11 @@
 		padding : 0;
 		border-top-width:0;
 		border-bottom:1px solid @tableBorder;
+		border-right:1px solid @tableBorder;
 	}
-	
+	.ks-grid-cell-empty,.ks-grid-hd-empty{
+		border-right-width : 0;
+	}
 	.table-striped;
 }
 
@@ -20,6 +28,14 @@
 		width:auto;
 	}
 }
+
+.ks-grid-height{
+	.ks-grid-hd-empty{
+		width: auto;
+	}
+}
+
+
 
 //±íÍ·
 
@@ -80,4 +96,16 @@
 .ks-grid-header-row td{
 	padding:0;
 	border-bottom-width:0;
+}
+
+//bar
+.ks-grid .ks-paggingbar{
+	float:right;
+}
+.ks-grid-tbar{
+	padding-bottom:10px;
+}
+
+.ks-grid-bbar{
+	padding-top:10px;
 }
