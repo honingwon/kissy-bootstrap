@@ -1370,8 +1370,6 @@ input[type="submit"].ks-button.ks-button-mini {
   /*display: none; // none by default, but block on "open" of the menu*/
 
   visibility: hidden;
-  min-width: 160px;
-  *width: 160px;
   padding: 4px 0;
   margin: 0;
   list-style: none;
@@ -3840,6 +3838,7 @@ a.thumbnail:hover {
 }
 .ks-combobox .ks-combobox-input {
   margin: 0;
+  width: 100%;
 }
 .oi-container {
   position: relative;
