@@ -179,6 +179,7 @@ S.log(group1.get('checkedValue'));
 			<ul>
 				<li>1. 按照DPL编写HTML，将节点通过配置项 srcNode 属性传入js</li>
 				<li>2. 利用js生成按钮，并且通过JS配置子元素信息</li>
+				<li>3. 下拉菜单的宽度可以根据按钮的宽度自适应，也可以自己配置下拉按钮宽度.<code>matchElWidth : false</code>时，下拉菜单不随着按钮的宽度变化</li>
 			</ul>
 		</div>
 		<div class="span12">
@@ -186,7 +187,7 @@ S.log(group1.get('checkedValue'));
 			<p>下拉按钮的结构包括：一个按钮,应用了样式 <code>ks-button</code>的元素、下拉图标和下拉列表</p>
 			<div class="ks-button-group">
 				<div id="J_MButton" class="ks-button">
-						淘宝网
+					<div class="ks-menu-button-caption">淘宝网</div>
 					<ul class="ks-menu ks-popupmenu">
 						<li class="ks-menuitem">Action</li>
 						<li class="ks-menuitem">Another action</li>
@@ -208,7 +209,8 @@ S.log(group1.get('checkedValue'));
 			<pre class="prettyprint linenums">
 KISSY.use("menubutton,menu", function (S, MenuButton, Menu) {
 var mb = new MenuButton({
-srcNode : '#J_MButton'
+srcNode : '#J_MButton',
+matchElWidth : false
 })
 mb.render();
 mb.on('click',function(event){
@@ -232,7 +234,9 @@ var item = event.target;
 var mb1 = new MenuButton({
       content:"淘宝网",
       describedby:"describe",
+			matchElWidth : false,
       menu : {xclass : 'popupmenu',
+			  width : 160,
         children:[
         {xclass : 'menuitem',content:"我要买",value:'buy'},
         {xclass : 'menuseparator'},
@@ -267,31 +271,32 @@ mb1.on('click',function(event){
 			<h3>使用JS生成</h3>
 			<p>仅仅提供了使用JS生成按钮的方式</p>
 			<div class="ks-button-group">
-				<button id="splitBtn" class="ks-button">action</button>
-				<button id="splitMenuBtn" class="ks-button">
+				<div id="splitBtn" class="ks-button">action</div>
+				<div id="splitMenuBtn" class="ks-button">
+					<div class="ks-menu-button-caption"></div>
 					<ul class="ks-menu ks-popupmenu">
 						<li class="ks-menuitem">Action</li>
 						<li class="ks-menuitem">Another action</li>
 						<li class="ks-menuitem">Something else here</li>
 					</ul>
-				</button>
+				</div>
 			</div>
 			<pre class="prettyprint linenums">
 &lt;div class="ks-button-group"&gt;
-	&lt;button id="splitBtn" class="ks-button"&gt;action&lt;/button&gt;
-	&lt;button id="splitMenuBtn" class="ks-button"&gt;
+	&lt;div id="splitBtn" class="ks-button"&gt;action&lt;/div&gt;
+	&lt;div id="splitMenuBtn" class="ks-button"&gt;
 		&lt;ul class="ks-menu ks-popupmenu"&gt;
 			&lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
 			&lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
 			&lt;li class="ks-menuitem"&gt;Something else here&lt;/li&gt;
 		&lt;/ul&gt;
-	&lt;/button&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 			</pre>
 			<pre class="prettyprint linenums">
 	var splitBtn = new Button.Split({
 		first:new Button({srcNode:'#splitBtn'}),
-		second : new MenuButton({srcNode:'#splitMenuBtn'})
+		second : new MenuButton({srcNode:'#splitMenuBtn',matchElWidth : false})
 	});
 	splitBtn.render();
 			</pre>
@@ -399,7 +404,8 @@ mb1.on('click',function(event){
 				});
 				
 				var mb = new MenuButton({
-					srcNode : '#J_MButton'
+					srcNode : '#J_MButton',
+					matchElWidth : false
 				})
 				mb.render();
 				mb.on('click',function(event){
@@ -412,7 +418,9 @@ mb1.on('click',function(event){
 				var		mb1 = new MenuButton({
 						content:"淘宝网",
 						describedby:"describe",
+						matchElWidth : false,
 						menu : {xclass : 'popupmenu',
+							width : 160,
 							children:[
 							{xclass : 'menuitem',content:"我要买",value:'buy'},
 							{xclass : 'menuseparator'},
@@ -430,7 +438,7 @@ mb1.on('click',function(event){
 
 				var splitBtn = new Button.Split({
 					first:new Button({srcNode:'#splitBtn'}),
-					second : new MenuButton({srcNode:'#splitMenuBtn'})
+					second : new MenuButton({srcNode:'#splitMenuBtn',matchElWidth : false})
 				});
 				splitBtn.render();
 				splitBtn.get('first').on('click',function(event){

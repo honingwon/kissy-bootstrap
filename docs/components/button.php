@@ -55,7 +55,7 @@
     <div class="span8">
       <h3>按钮的行为</h3>
       <p>一般而言，按钮仅当链接作为一个行为对象时来使用时。例如“下载”应当为一个按钮，“最近活动”应该是一个链接。</p>
-      <p>按钮的样式可以使用任何标签并添加样式 <code>.ks-button</code> 。但是一般而言你应该仅使用 <code>&lt;a&gt;</code> 和 <code>&lt;button&gt;</code> 元素。</p>
+      <p>按钮的样式可以使用任何标签并添加样式 <code>.ks-button</code> 。但是一般而言你应该仅使用 <code>&lt;a&gt;</code> 和 <code>&lt;button&gt;</code> 元素。但是当使用menuButton时，请使用<code>&lt;div&gt;</code>。</p>
       
     </div>
     <div class="span8">
@@ -197,7 +197,8 @@
       <p>使用按钮代替下拉菜单，设置class <code>.ks-button-group</code> 和合适的标签。</p>
       <div class="ks-button-toolbar" style="margin-top: 18px;">
        
-          <div class="ks-button dropdown-toggle">Action
+          <div class="ks-button dropdown-toggle">
+						<div class="ks-menu-button-caption">Action</div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -206,7 +207,7 @@
           </div>
 
        
-          <div class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown">Action 
+          <div class="ks-button ks-button-primary dropdown-toggle" data-toggle="dropdown"><div class="ks-menu-button-caption">Action</div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -216,7 +217,7 @@
 
        
           <div class="ks-button ks-button-danger dropdown-toggle" data-toggle="dropdown">
-          Danger 
+          <div class="ks-menu-button-caption">Danger</div> 
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -228,7 +229,8 @@
       </div>
       <div class="ks-button-toolbar">
           <div class="ks-button ks-button-warning dropdown-toggle" data-toggle="dropdown">
-          Warning 
+						<div class="ks-menu-button-caption">Warning</div>
+           
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -236,7 +238,8 @@
             </ul>
           </div>
 
-          <div class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown">Success
+          <div class="ks-button ks-button-success dropdown-toggle" data-toggle="dropdown">
+						<div class="ks-menu-button-caption">Success</div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -244,14 +247,16 @@
             </ul>
           </div>
 
-          <div class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown">Info 
+          <div class="ks-button ks-button-info dropdown-toggle" data-toggle="dropdown">
+							<div class="ks-menu-button-caption">Info </div>
               <ul class="ks-menu ks-popupmenu">
                 <li class="ks-menuitem">Action</li>
                 <li class="ks-menuitem">Another action</li>
                 <li class="ks-menuitem">Something else here</li>
               </ul>
           </div>
-          <div class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown">Inverse 
+          <div class="ks-button ks-button-inverse dropdown-toggle" data-toggle="dropdown">
+						<div class="ks-menu-button-caption">Inverse</div> 
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -264,7 +269,7 @@
       <h3>示例</h3>
       <p>类似于按钮组，我们使用通用的按钮标签和一些重新定义了的样式来支持kissy的DPL插件.</p>
 <pre class="prettyprint linenums">
-&lt;div class="ks-button dropdown-toggle"&gt;Action
+&lt;div class="ks-button dropdown-toggle"&gt;&lt;div class="ks-menu-button-caption"&gt;Action&lt;/div&gt;
   &lt;ul class="ks-menu ks-popupmenu"&gt;
     &lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
     &lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
@@ -279,7 +284,8 @@
       <h3>可以适用于各种尺寸的按钮</h3>
       <p>下拉按钮适用于多种尺寸大小. 你可以定义 <code>.ks-button-large</code>, <code>.ks-button-small</code>, 或者 <code>.ks-button-mini</code>三种类型。</p>
       <div class="ks-button-toolbar" style="margin-top: 18px;">
-          <div class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown">Large button 
+          <div class="ks-button ks-button-large dropdown-toggle" data-toggle="dropdown">
+						<div class="ks-menu-button-caption">Large button </div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -288,7 +294,8 @@
           </div>
           
 
-          <div class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown">Small button 
+          <div class="ks-button ks-button-small dropdown-toggle" data-toggle="dropdown">
+						<div class="ks-menu-button-caption">Small button</div> 
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -296,7 +303,8 @@
             </ul>
           </div>
 
-          <div class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown">Mini button 
+          <div class="ks-button ks-button-mini dropdown-toggle" data-toggle="dropdown">
+						<div class="ks-menu-button-caption">Mini button </div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -323,6 +331,7 @@
         <div class="ks-button-group">
           <div class="ks-button">Action</div>
           <div class="ks-button dropdown-toggle">
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -333,6 +342,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-primary">Action</div>
           <div class="ks-button ks-button-primary dropdown-toggle">
+					  <div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -344,6 +354,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-danger">Danger</div>
           <div class="ks-button ks-button-danger dropdown-toggle">
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -357,6 +368,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-warning">Warning</div>
           <div class="ks-button ks-button-warning dropdown-toggle">
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -368,6 +380,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-success">Success</div>
           <div class="ks-button ks-button-success dropdown-toggle">
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -379,6 +392,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-info">Info</div>
           <div class="ks-button ks-button-info dropdown-toggle">
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -391,6 +405,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-inverse">Inverse</div>
           <div class="ks-button ks-button-inverse dropdown-toggle">
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -405,6 +420,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-large">Large action</div>
           <div class="ks-button ks-button-large dropdown-toggle" >
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -418,6 +434,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-small">Small action</div>
           <div class="ks-button ks-button-small dropdown-toggle" >
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -430,6 +447,7 @@
         <div class="ks-button-group">
           <div class="ks-button ks-button-mini">Mini action</div>
           <div class="ks-button ks-button-mini dropdown-toggle">
+						<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -447,6 +465,7 @@
 &lt;div class="ks-button-group"&gt;
   &lt;div class="ks-button ks-button-mini"&gt;Mini action&lt;/div&gt;
   &lt;div class="ks-button ks-button-mini dropdown-toggle"&gt;
+		&lt;div class="ks-menu-button-caption"&gt;&lt;/div&gt;
     &lt;ul class="ks-menu ks-popupmenu"&gt;
       &lt;li class="ks-menuitem"&gt;Action&lt;/li&gt;
       &lt;li class="ks-menuitem"&gt;Another action&lt;/li&gt;
@@ -461,6 +480,7 @@
         <div class="ks-button-group dropup">
           <div class="ks-button">Dropup</div>
           <div class="ks-button dropdown-toggle">
+					<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -471,6 +491,7 @@
         <div class="ks-button-group dropup">
           <div class="ks-button primary">Right dropup</div>
           <div class="ks-button primary dropdown-toggle" >
+					<div class="ks-menu-button-caption"></div>
             <ul class="ks-menu ks-popupmenu">
               <li class="ks-menuitem">Action</li>
               <li class="ks-menuitem">Another action</li>
@@ -499,7 +520,8 @@
         
         var parent = item.parent(),
 						mbtn = new MenuButton({
-							srcNode : item
+							srcNode : item,
+							matchElWidth  : false
 						});
         if(parent.hasClass('ks-button-group')){
           var prev = item.prev('.ks-button'),
