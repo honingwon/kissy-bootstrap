@@ -165,6 +165,7 @@ KISSY.use("menu", function(S, Menu) {
      KISSY.use("menu", function(S, Menu) {
         var context = S.all("#context");
         var sb = new Menu.PopupMenu({
+						width : 160,
             elStyle:{
                 color:"red"
             }
@@ -205,6 +206,7 @@ KISSY.use("menu", function(S, Menu) {
         var menu = new Menu.PopupMenu({
             // 接受键盘事件
             focusable:1,
+						width:160,
             children:[b,new Menu.Item({
                 
                 content:"alone"})]
@@ -229,6 +231,7 @@ KISSY.use("menu", function(S, Menu) {
       var menu = new Menu.PopupMenu({
         // 接受键盘事件
         focusable:1,
+				width:160,
         children:[
               {
                   xclass:'submenu',
