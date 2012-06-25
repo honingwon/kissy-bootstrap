@@ -81,6 +81,7 @@ KISSY.use("menu", function(S, Menu) {
 });
       </pre>
     </div>
+    <!--
     <div class="span8">
       <h3>下拉菜单示例</h3>
       <p>下面是一个基于导航的下拉菜单示例</p>
@@ -159,7 +160,7 @@ KISSY.use("menu", function(S, Menu) {
         </pre>
       </div>
     </div>
-
+-->
   </div>
   <script>
      KISSY.use("menu", function(S, Menu) {
@@ -227,6 +228,7 @@ KISSY.use("menu", function(S, Menu) {
         });
 
     });
+    /*
     KISSY.use("menu", function(S, Menu) {
       var menu = new Menu.PopupMenu({
         // 接受键盘事件
@@ -286,5 +288,6 @@ KISSY.use("menu", function(S, Menu) {
         }
       });
     });
+    */
   </script>
 </section>

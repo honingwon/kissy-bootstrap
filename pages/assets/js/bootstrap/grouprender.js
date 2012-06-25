@@ -9,7 +9,7 @@ KISSY.add('bootstrap/grouprender',function(S,Component){
      * @constructor
      * @extends Button
      */
-	var ButtonGroupRender = Component.define(Component.Render,[],{
+	var ButtonGroupRender = Component.Render.extend({
 		 createDom:function () {
             // set wai-aria role
             this.get("el")

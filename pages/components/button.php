@@ -112,8 +112,9 @@
     </div>
   </div>
 </section>
+
 <!-- Button Groups
-================================================== -->
+==================================================
 <section id="buttonGroups">
   <div class="page-header">
     <h1>按钮组 <small>将多个按钮组合成工具栏</small></h1>
@@ -182,7 +183,8 @@
     </div>
   </div>
 </section>
-
+ -->
+ 
 <!-- Split button dropdowns
 ================================================== -->
 <section id="buttonDropdowns">
@@ -519,22 +521,18 @@
       S.all('.dropdown-toggle','#buttonDropdowns').each(function(item){
         
         var parent = item.parent(),
-						mbtn = new MenuButton({
-							srcNode : item,
-							matchElWidth  : false
-						});
+			mbtn = new MenuButton({
+				srcNode : item,
+				matchElWidth  : false
+			});
+            mbtn.render();
+            
         if(parent.hasClass('ks-button-group')){
           var prev = item.prev('.ks-button'),
               btn = new Button({srcNode : prev});
-					if(parent.hasClass('dropup')){
-						mbtn.set('menuAlign',{ points: ['tl','bl']});
-					}
-          new Button.Split({
-            first:btn,
-            second : mbtn
-          }).render();
-        }else{
-          mbtn.render();
+    		if(parent.hasClass('dropup')){
+    			mbtn.set('menuAlign',{ points: ['tl','bl']});
+    		}         
         }
       });
     });

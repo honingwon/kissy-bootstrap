@@ -67,8 +67,9 @@ alert('js 生成');
 				</pre>
 					<pre class="prettyprint linenums">
 KISSY.use('button',function(S,Button){
-var toggleButton = new Button.Toggle({
+var toggleButton = new Button({
 	content:"测试",
+	checkable:true,
 	describedby:"describe",
 	render:"#J_Toggle",
 	elCls : 'ks-button-primary'
@@ -82,6 +83,7 @@ toggleButton.on('click',function(){
 				</pre>
 		</div>
 	</div>
+	<!--
 	<div class="row">
 		<div class="span12">
 			<h3>生成按钮组</h3>
@@ -120,7 +122,7 @@ group.render();
 		</div>
 		<div class="span12">
 			<h3>通过配置项生成按钮组</h3>
-			<p>按钮组，可以设置按钮的选择状态，默认是点击按钮时，不会产生选中效果，可以设置<code>checkModle : 'radio'</code>（单选）或者<code>checkModle : 'check'</code>（复选）。此时可以通过监听按钮组的 checkedChanged 事件，取得发生改变后按钮组选中的按钮，取得的结果是按钮（value）的数组。
+			<p>按钮组，可以设置按钮的选择状态，默认是点击按钮时，不会产生选中效果，可以设置<code>checkMode : 'radio'</code>（单选）或者<code>checkMode : 'check'</code>（复选）。此时可以通过监听按钮组的 checkedChanged 事件，取得发生改变后按钮组选中的按钮，取得的结果是按钮（value）的数组。
 			</p>
 			<div id="J_Group1" class="ks-button-group"></div>
 				<pre class="prettyprint linenums">
@@ -129,7 +131,7 @@ group.render();
 		<pre class="prettyprint linenums">
 var group1 = new ButtonGroup({
 srcNode : '#J_Group1',
-checkModle : 'radio',
+checkMode : 'radio',
 children:[
 {
 	value : 'v1',
@@ -170,6 +172,7 @@ S.log(group1.get('checkedValue'));
 		</pre>
 		</div>
 	</div>
+	-->
 	<h2>下拉按钮</h2>
 	<div id="drowpButton" class="row">
 		<div class="span12">
@@ -294,11 +297,23 @@ mb1.on('click',function(event){
 &lt;/div&gt;
 			</pre>
 			<pre class="prettyprint linenums">
-	var splitBtn = new Button.Split({
-		first:new Button({srcNode:'#splitBtn'}),
-		second : new MenuButton({srcNode:'#splitMenuBtn',matchElWidth : false})
-	});
-	splitBtn.render();
+			    var first=new Button({
+                    srcNode:'#splitBtn',
+                    listeners:{
+                        click:function(){
+                            alert(this.get('content'));
+                        }
+                    }
+                }).render();
+                var second=new MenuButton({
+                    srcNode:'#splitMenuBtn',
+                    listeners:{
+                        click:function(e){
+                            first.set("content",e.target.get("content"));
+                        }
+                    },
+                    matchElWidth : false
+                }).render();
 			</pre>
 		</div>
 	</div>
@@ -325,8 +340,9 @@ mb1.on('click',function(event){
 					alert('js 生成');
 				});
 
-				var toggleButton = new Button.Toggle({
+				var toggleButton = new Button({
 					content:"测试",
+					checkable:true,
 					describedby:"describe",
 					render:"#J_Toggle",
 					elCls : 'ks-button-primary'
@@ -336,7 +352,8 @@ mb1.on('click',function(event){
 				toggleButton.on('click',function(){
 					alert(this.get('checked'));
 				});
-				
+
+				/*
 				var group = new ButtonGroup({
 					srcNode : '#J_Group',
 					children:[
@@ -364,7 +381,7 @@ mb1.on('click',function(event){
 
 				var group1 = new ButtonGroup({
 					srcNode : '#J_Group1',
-					checkModle : 'radio',
+					checkMode : 'radio',
 					children:[
 						{
 							value : 'v1',
@@ -402,7 +419,7 @@ mb1.on('click',function(event){
 				group1.on('checkedChanged',function(){
 					S.log(group1.get('checkedValue'));
 				});
-				
+				*/
 				var mb = new MenuButton({
 					srcNode : '#J_MButton',
 					matchElWidth : false
@@ -436,15 +453,23 @@ mb1.on('click',function(event){
 					alert(item.get('value'));
 				});
 
-				var splitBtn = new Button.Split({
-					first:new Button({srcNode:'#splitBtn'}),
-					second : new MenuButton({srcNode:'#splitMenuBtn',matchElWidth : false})
-				});
-				splitBtn.render();
-				splitBtn.get('first').on('click',function(event){
-					//var btn = event.target;
-					alert(this.get('content'));
-				});
+                var first=new Button({
+                    srcNode:'#splitBtn',
+                    listeners:{
+                        click:function(){
+                            alert(this.get('content'));
+                        }
+                    }
+                }).render();
+                var second=new MenuButton({
+                    srcNode:'#splitMenuBtn',
+                    listeners:{
+                        click:function(e){
+                            first.set("content",e.target.get("content"));
+                        }
+                    },
+                    matchElWidth : false
+                }).render();
 			});
 
 	</script>
