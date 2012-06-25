@@ -63,11 +63,17 @@
 		<ul class="nav nav-pills">
 			<li><a href="#button">按钮</a></li>
 			<li><a href="#tab">Tab</a></li>
+			<!--
 			<li><a href="#pagination">分页</a></li>
+			-->
 			<li><a href="#alert">提示框(Alert)</a></li>
 			<li><a href="#dialog">弹出框(Dialog)</a></li>
+			<!--
 			<li><a href="#progress">进度条</a></li>
+			-->
+			<!--
 			<li><a href="#tips">提示信息(Tips)</a></li>
+			-->
 			<li><a href="#loading">加载(Loading</a></li>
 		</ul>
 	</div>
@@ -195,8 +201,9 @@
     </div>
   </div>
 </section>
+
 <!-- Button Groups
-================================================== -->
+==================================================
 <section id="buttonGroups">
   <div class="page-header">
     <h1>按钮组 <small>将多个按钮组合成工具栏</small></h1>
@@ -265,7 +272,8 @@
     </div>
   </div>
 </section>
-
+ -->
+ 
 <!-- Split button dropdowns
 ================================================== -->
 <section id="buttonDropdowns">
@@ -602,22 +610,18 @@
       S.all('.dropdown-toggle','#buttonDropdowns').each(function(item){
         
         var parent = item.parent(),
-						mbtn = new MenuButton({
-							srcNode : item,
-							matchElWidth  : false
-						});
+			mbtn = new MenuButton({
+				srcNode : item,
+				matchElWidth  : false
+			});
+            mbtn.render();
+            
         if(parent.hasClass('ks-button-group')){
           var prev = item.prev('.ks-button'),
               btn = new Button({srcNode : prev});
-					if(parent.hasClass('dropup')){
-						mbtn.set('menuAlign',{ points: ['tl','bl']});
-					}
-          new Button.Split({
-            first:btn,
-            second : mbtn
-          }).render();
-        }else{
-          mbtn.render();
+    		if(parent.hasClass('dropup')){
+    			mbtn.set('menuAlign',{ points: ['tl','bl']});
+    		}         
         }
       });
     });
@@ -848,222 +852,7 @@
 
 		});
 	</script>
-</section><!-- Pagination
-================================================== -->
-<section id="pagination">
-  <div class="page-header">
-    <h1>分页栏 <small>2种分页选择</small></h1>
-  </div>
-
-  <h2>多页分页</h2>
-  <div class="row">
-    <div class="span8">
-      <h3>有状态的页链接</h3>
-      <p>链接根据当前页的状态使用了了合适的样式，例如当页面不能点击时使用<code>.disabled</code>样式；当前页使用<code>.active</code>样式。</p>
-      <h3>灵活的对齐方式</h3>
-      <p>可以再分页的链接上添加2种样式，改变文字的对齐方式：<code>.pagination-centered</code> 和<code>.pagination-right</code>。</p>
-    </div>
-    <div class="span8">
-      <h3>示例</h3>
-      <p>默认的分页组件是一个灵活的使用数字变量的组件.</p>
-      <div class="pagination">
-        <ul>
-          <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
-      </div>
-      <div class="pagination">
-        <ul>
-          <li><a href="#">&laquo;</a></li>
-          <li><a href="#">10</a></li>
-          <li class="active"><a href="#">11</a></li>
-          <li><a href="#">12</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
-      </div>
-      <div class="pagination">
-        <ul>
-          <li><a href="#">&larr;</a></li>
-          <li class="active"><a href="#">10</a></li>
-          <li class="disabled"><a href="#">...</a></li>
-          <li><a href="#">20</a></li>
-          <li><a href="#">&rarr;</a></li>
-        </ul>
-      </div>
-      <div class="pagination pagination-centered">
-        <ul>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="span8">
-      <h3>HTML 标签</h3>
-      <p>分页栏是一个封装在<code>&lt;div&gt;</code>中的<code>&lt;ul&gt;</code>列表。</p>
-<pre class="prettyprint linenums">
-&lt;div class="pagination"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li>
-    &lt;li class="active"&gt;
-      &lt;a href="#"&gt;1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li>
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-    </div>
-  </div><!-- /row -->
-
-  <h2>简单分页栏 <small>仅使用下一页和上一页</small></h2>
-  <div class="row">
-    <div class="span8">
-      <h3>关于简单分页栏</h3>
-      <p>简单分页栏使用一些非常简单的标签和轻量的样式来实现，这非常适用于博客和新闻之类的简单网站。</p>
-      <h4>可选的禁用状态</h4>
-      <p>简单分页栏跟一般分页栏一样可以使用 <code>.disabled</code>样式。</p>
-    </div>
-    <div class="span8">
-      <h3>示例</h3>
-      <p>简单分页栏是文本默认居中的链接。</p>
-      <ul class="pager">
-        <li><a href="#">Previous</a></li>
-        <li><a href="#">Next</a></li>
-      </ul>
-<pre class="prettyprint linenums">
-&lt;ul class="pager"&gt;
-  &lt;li&gt;
-    &lt;a href="#"&gt;Previous&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;a href="#"&gt;Next&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-    </div>
-    <div class="span8">
-      <h3>链接的对其方式</h3>
-      <p>作为一种选择，你可以将链接分别对其两边：</p>
-      <ul class="pager">
-        <li class="previous"><a href="#">&larr; Older</a></li>
-        <li class="next"><a href="#">Newer &rarr;</a></li>
-      </ul>
-<pre class="prettyprint linenums">
-&lt;ul class="pager"&gt;
-  &lt;li class="previous"&gt;
-    &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class="next"&gt;
-    &lt;a href="#"&gt;Newer &amp;rarr;&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-    </div>
-  </div><!-- /row -->
-</section>
-
-
-<!-- Alerts & Messages
-================================================== -->
-<section id="alert">
-  <div class="page-header">
-    <h1>提示信息（Alerts）<small>成功、警告和错误提示</small></h1>
-  </div>
-  <div class="row">
-    <div class="span8">
-      <h3>简单统一的信息提示</h3>
-      <p>Alert主要包含2部分，关闭Icon（可选）和内容，外层用一个div包含并添加样式 <code>.alert-block</code>.</p>
-      <hr>
-      <h3>KISSY DPL 插件的支持</h3>
-      <p>使用KISSY 的DPL插件可以使Alert具有关闭、拖动等功能</p>
-      <p><a class="ks-button js-btn" href="dpl-plugin.html#message">获取 plugin &raquo;</a></p>
-    </div>
-    <div class="span16">
-      <h3>示例</h3>
-      <p>警告提示，包含提示信息和可选的关闭图标。</p>
-      <div class="alert">
-        <a class="close" data-dismiss="alert">&times;</a>
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert"&gt;
-  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
-  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
-&lt;/div&gt;
-</pre>
-      <p>可以简单的对Alert进行扩展:使用样式 <code>.alert-block</code> 可以增加额外的Padding;使用 <code>.alert-heading</code>可以添加标题。</p>
-      <div class="alert alert-block">
-        <a class="close" data-dismiss="alert">&times;</a>
-        <h4 class="alert-heading">Warning!</h4>
-        <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-block"&gt;
-  &lt;a class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;
-  &lt;h4 class="alert-heading"&gt;Warning!&lt;/h4&gt;
-  Best check yo self, you're not...
-&lt;/div&gt;
-</pre>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span8">
-      <h3>错误</h3>
-      <div class="alert alert-error">
-        <a class="close" data-dismiss="alert">&times;</a>
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-error"&gt;
-  ...
-&lt;/div&gt;
-</pre>
-    </div>
-    <div class="span8">
-      <h3>成功</h3>
-      <div class="alert alert-success">
-        <a class="close" data-dismiss="alert">&times;</a>
-        <strong>Well done!</strong> You successfully read this important alert message.
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-success"&gt;
-  ...
-&lt;/div&gt;
-</pre>
-    </div>
-    <div class="span8">
-      <h3>提示</h3>
-      <div class="alert alert-info">
-        <a class="close" data-dismiss="alert">&times;</a>
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-info"&gt;
-  ...
-&lt;/div&gt;
-</pre>
-    </div>
-  </div>
-<script>
-	KISSY.use('bootstrap/message',function(S,Message){
-		S.all('.alert','#alert').each(function(item){
-			new Message({srcNode : item});
-		});
-		
-	});
-</script>
-</section>
-<!-- Progress bars
+</section><!-- Progress bars
 ================================================== -->
 <section id="dialog">
   <div class="page-header">
@@ -1118,169 +907,7 @@
 		</div>
 	</div>
 </section>
-<!-- Progress bars
-================================================== -->
-<section id="progress">
-  <div class="page-header">
-    <h1>进度条<small>进行加载、渲染和动作时使用的组件</small></h1>
-  </div>
-
-  <h2>示例和标签</h2>
-  <div class="row">
-    <div class="span8">
-      <h3>基本示例</h3>
-      <p>默认的进度条有垂直的渐变色。</p>
-      <div class="progress">
-        <div class="bar" style="width: 60%;"></div>
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="progress"&gt;
-  &lt;div class="bar"
-       style="width: 60%;"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-    </div>
-    <div class="span8">
-      <h3>有条纹的进度条</h3>
-      <p>使用渐变创建条纹效果（IE不支持）。</p>
-      <div class="progress progress-striped">
-        <div class="bar" style="width: 20%;"></div>
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="progress progress-striped"&gt;
-  &lt;div class="bar"
-       style="width: 20%;"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-    </div>
-    <div class="span8">
-      <h3>有动画效果的进度条</h3>
-      <p>使用有条纹的进度条，并添加动画效果(IE不支持)。</p>
-      <div class="progress progress-striped active">
-        <div class="bar" style="width: 45%"></div>
-      </div>
-<pre class="prettyprint linenums">
-&lt;div class="progress progress-striped
-     active"&gt;
-  &lt;div class="bar"
-       style="width: 40%;"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-    </div>
-  </div>
-
-  <h2>可选项和浏览器支持</h2>
-  <div class="row">
-    <div class="span6">
-      <h3>额外的颜色支持</h3>
-      <p>进度条使用许多跟按钮和信息提示一致的样式，保证系统的一致性。</p>
-      <div class="progress progress-info" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 20%"></div>
-      </div>
-      <div class="progress progress-success" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 40%"></div>
-      </div>
-      <div class="progress progress-warning" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 60%"></div>
-      </div>
-      <div class="progress progress-danger" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 80%"></div>
-      </div>
-    </div>
-     <div class="span6">
-      <h3>有条纹的进度条</h3>
-      <p>类似于固定颜色的进度条，条纹的颜色也有多种选择。</p>
-      <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 20%"></div>
-      </div>
-      <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 40%"></div>
-      </div>
-      <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 60%"></div>
-      </div>
-      <div class="progress progress-danger progress-striped" style="margin-bottom: 9px;">
-        <div class="bar" style="width: 80%"></div>
-      </div>
-    </div>
-    <div class="span6">
-      <h3>行为</h3>
-      <p>进度条使用CSS3转换，如果你使用Javascript操作动态宽度的进度条，这会非常容易的改变尺寸。</p>
-      <p>加入你使用 <code>.active</code>样式，你使用样式 <code>.progress-striped</code> 后，进度条将产生从左到右的动画效果。</p>
-    </div>
-    <div class="span6">
-      <h3>浏览器支持</h3>
-      <p>进度条使用css3的渐变、转换和动画实现视觉效果。这些特性在Ie7-9中或者老的fifox版本中不支持。</p>
-      <p>Opera 和 IE 浏览器现在不支持动画效果。</p>
-    </div>
-  </div>
-
-</section>
-
-<!-- Tips -->
-<section id="tips">
-	<div class="page-header">
-    <h1>Tips <small>鼠标移动到元素上的信息提示</small></h1>
-  </div>
-	<div class="row">
-		<div class="span8">
-			<h3>关于Tips</h3>
-			<p>其实就是ToolTips,当鼠标移动到某些元素上时显示的文本框，用于解释当前元素或者显示更详细的信息。</p>
-			<p>对于HTML元素而言，在属性中添加 <code>title=""</code>时会出现ToolTips效果，我们重写了系统的默认样式，所以必须以javascript的插件引入，具体参考 KISSY DPL 插件 Tips</p>
-		</div>
-		
-		<div class="span16">
-			<h3>示例</h3>
-			<p id="J_Tips" class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="tooltip" title="first tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
-			</p>
-			<h3>HTML代码</h3>
-			<p>tooltip的代码是javascript自动生成的，这里显示的是触发元素的HTML</p>
-<pre class="prettyprint linenums">
-	&lt;a href="#" rel="tooltip" title="first tooltip"&gt;hover over me&lt;/a&gt;
-</pre>
-		</div>
-	</div>
-	<div class="row">
-		<div class="span8">
-			<h3>复杂的Tips</h3>
-			<p>如果想在tooltip里添加比较长的文本或者嵌套HTML代码并附加样式的话，必须指定嵌入的HTML,在调用tooltip的插件时配置，详细信息参考KISSY DPL 插件 Tips</p>
-		</div>
-		<div class="span16">
-			<h3>示例</h3>
-			<div style="height:120px;position:relative">
-				<div class="popover fade right in" style="display: block; "><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title">A Title</h3><div class="popover-content"><p>And here's some amazing content. It's very engaging. right?</p></div></div></div>
-
-			</div>
-		</div>
-	</div>
-	<script>
-		KISSY.use('bootstrap/tooltip',function(S,Tooltip){
-			Tooltip({selector : '#J_Tips a'});
-		});
-	</script>
-</section><!-- loading -->
-<section id="loading">
-<div class="page-header">
-    <h1>Loading <small>加载数据时的等待</small></h1>
-</div>
-<div class="row">
-	<div class="span8">
-		<h3>关于Loading</h3>
-		<p>Loading 组件主要用于发出请求等待数据时，经常跟mask一起使用，阻止某些操作。</p>
-		<p>该组件需要使用Javascript插件 具体参考 KISSY DPL 插件 loadding</p>
-	</div>
-	<div class="span16">
-		<h3>示例</h3>
-		<div class="well  modal-example" style="position:relative;width:500px;height:300px;background-color: #888;">
-			<div class="loading-wrap">
-				<div class="triangle1"></div>
-				<div class="triangle2"></div>
-				<div class="triangle3"></div>
-			</div>
-		</div>
-	</div>
-</div>
-</section><!-- Footer
+<!-- Footer
       ================================================== -->
 <footer class="footer">
 	<p class="pull-right">

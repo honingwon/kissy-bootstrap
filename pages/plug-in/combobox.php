@@ -1,17 +1,17 @@
 <!-- tooltips
 ================================================== -->
-<section id="autocomplete">
+<section id="combobox">
   <div class="page-header">
-    <h1>autocomplete <small>输入文本提示</small></h1>
+    <h1>combobox <small>输入文本提示</small></h1>
   </div>
   <div class="row">
     <div class="span6">
-      <h3>关于autocomplete</h3>
-      <p>当用户输入文本时，显示相关联的提示选项，包括：suggest,combox等方式</p>
+      <h3>关于 combobox</h3>
+      <p>当用户输入文本时，显示相关联的提示选项，包括：suggest,combobox等方式</p>
     </div>
     <div class="span9">
       <h3>suggest 示例</h3>
-      <p>使用已有DOM生成autocomplete</p>
+      <p>使用已有DOM生成 combobox</p>
       <div>
 				<div class="ks-combobox" id="J_AutoComplete">
 					<div class="ks-combobox-input-wrap">
@@ -33,7 +33,7 @@
 					width:100,
 					srcNode:S.one("#J_AutoComplete"),
 					// 初始就聚焦
-					focused:true,
+					//focused:true,
 					hasTrigger:false,
 					dataSource:{
 							data:data,
@@ -52,7 +52,7 @@
     </div>
     <div class="span9">
       <h3>suggest 示例</h3>
-      <p>使用已有js生成autocomplete,可以通过配置格式化函数，格式化建议项，并且可以禁用建议项</p>
+      <p>使用已有js生成 combobox,可以通过配置格式化函数，格式化建议项，并且可以禁用建议项</p>
       <div id="inp_container">
        
       </div>
@@ -99,12 +99,12 @@
   </div>
   <div class="row">
     <div class="span6">
-      <h3>关于combox</h3>
-      <p>组合框，是一个输入框和下拉菜单构成，跟autocomplete一起组合使用更方便用户</p>
+      <h3>关于combobox</h3>
+      <p>组合框，是一个输入框和下拉菜单构成，一起组合使用更方便用户</p>
     </div>
     <div class="span9">
-      <h3>combox示例</h3>
-      <p>利用现有DOM生成combox</p>
+      <h3>combobox示例</h3>
+      <p>利用现有DOM生成combobox</p>
       <div>
 				<div class="ks-combobox" id="J_Combox">
 					<div class="ks-combobox-input-wrap">
@@ -135,13 +135,13 @@
       </pre>
     </div>
     <div class="span9">
-      <h3>combox示例</h3>
-      <p>利用js生成combox</p>
-      <div id="inp-combox-container">
+      <h3>combobox 示例</h3>
+      <p>利用js生成 combobox</p>
+      <div id="inp-combobox-container">
         
       </div>
       <pre class="prettyprint linenums">
-        &lt;div id="inp-combox-container"&gt;
+        &lt;div id="inp-combobox-container"&gt;
         
         &lt;/div&gt;
       </pre>
@@ -150,7 +150,7 @@ KISSY.use('combobox',function(S,ComboBox){
 	var data = ["a123456", "b12345", "c3464356", "d23434"];
 
 	var basicComboBox = new ComboBox({
-				render:"#inp-combox-container",
+				render:"#inp-combobox-container",
 				dataSource:{
 						xclass:'combobox-LocalDataSource',
 						data:data
@@ -182,7 +182,7 @@ KISSY.use('combobox',function(S,ComboBox){
 					srcNode:S.one("#J_AutoComplete"),
 					width:100,
 					// 初始就聚焦
-					focused:true,
+					// focused:true,
 					hasTrigger:false,
 					dataSource:{
 							data:data,
@@ -247,7 +247,7 @@ KISSY.use('combobox',function(S,ComboBox){
 		var data = ["a123456", "b12345", "c3464356", "d23434"];
 
 		var basicComboBox = new ComboBox({
-					render:"#inp-combox-container",
+					render:"#inp-combobox-container",
 					dataSource:{
 							xclass:'combobox-LocalDataSource',
 							data:data

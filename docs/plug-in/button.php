@@ -83,6 +83,7 @@ toggleButton.on('click',function(){
 				</pre>
 		</div>
 	</div>
+	<!--
 	<div class="row">
 		<div class="span12">
 			<h3>生成按钮组</h3>
@@ -171,6 +172,7 @@ S.log(group1.get('checkedValue'));
 		</pre>
 		</div>
 	</div>
+	-->
 	<h2>下拉按钮</h2>
 	<div id="drowpButton" class="row">
 		<div class="span12">
@@ -350,7 +352,8 @@ mb1.on('click',function(event){
 				toggleButton.on('click',function(){
 					alert(this.get('checked'));
 				});
-				
+
+				/*
 				var group = new ButtonGroup({
 					srcNode : '#J_Group',
 					children:[
@@ -416,7 +419,7 @@ mb1.on('click',function(event){
 				group1.on('checkedChanged',function(){
 					S.log(group1.get('checkedValue'));
 				});
-				
+				*/
 				var mb = new MenuButton({
 					srcNode : '#J_MButton',
 					matchElWidth : false
