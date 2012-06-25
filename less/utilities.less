@@ -27,9 +27,30 @@
     *display: inline;
     *zoom:1;
 }
+
+.ks-ext-mask-msg{
+	position:absolute;
+	padding:5px;
+	z-index:9999;
+}
+.x-masked-relative{
+	position:relative;
+}
 .ks-ext-mask{
-	background-color: black;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	position: absolute;
+	-webkit-user-select: none;
+	z-index: 9998;
+	background-color: @black;
 	.opacity(80);
+}
+
+.x-mask-loading{
+	padding-left:25px;
+	background: no-repeat 5px center url(http://img04.taobaocdn.com/tps/i4/T18OLnXaJgXXaHNz_X-16-16.gif) white;
 }
 .ks-overlay {
 		position:absolute;
