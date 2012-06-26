@@ -3170,6 +3170,43 @@ a.thumbnail:hover {
   width: 100%;
   border-width: 0;
 }
+.ks-bar-item-separator {
+  width: 0;
+  height: 15px;
+  border-left: solid 1px #dddddd;
+  margin: 0 3px;
+}
+.ks-bar-item {
+  display: inline-block;
+}
+.ks-paggingbar {
+  font-size: 12px;
+  height: 24px;
+  background-color: white;
+  overflow: hidden;
+}
+.ks-bar-item-button {
+  margin-left: 2px;
+}
+.ks-paggingbar .ks-button {
+  height: 18px;
+  padding: 2px 8px;
+}
+.ks-paggingbar .ks-pb-page {
+  color: red;
+  font: 11px tahoma, arial, verdana, sans-serif;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  text-align: center;
+}
+.ks-number-paggingbar .ks-active {
+  border: 1px solid #aaaaaa;
+}
+.ks-bar-item-text {
+  margin-left: 4px;
+}
 .ks-grid {
   outline: 0;
 }
@@ -3211,15 +3248,19 @@ a.thumbnail:hover {
   padding: 0;
   border-top-width: 0;
   border-bottom: 1px solid #dddddd;
-  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
 }
 .ks-grid-table .ks-grid-cell-empty,
 .ks-grid-table .ks-grid-hd-empty {
-  border-right-width: 0;
+  border-left-width: 0;
 }
 .ks-grid-table tbody tr:nth-child(odd) td,
 .ks-grid-table tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
+}
+.ks-grid-table tr td:first-child,
+.ks-grid-table tr th:first-child {
+  border-left-width: 0;
 }
 .ks-grid-cell-empty,
 .ks-grid-hd-empty {

@@ -12,12 +12,18 @@
 		padding : 0;
 		border-top-width:0;
 		border-bottom:1px solid @tableBorder;
-		border-right:1px solid @tableBorder;
+		border-left:1px solid @tableBorder;
 	}
 	.ks-grid-cell-empty,.ks-grid-hd-empty{
-		border-right-width : 0;
+		border-left-width : 0;
 	}
+
+	
 	.table-striped;
+}
+
+.ks-grid-table tr td:first-child,.ks-grid-table tr th:first-child{
+		border-left-width:0;
 }
 
 .ks-grid-cell-empty,.ks-grid-hd-empty{
