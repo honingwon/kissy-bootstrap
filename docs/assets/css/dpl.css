@@ -1154,6 +1154,164 @@ input[type="submit"].ks-button.ks-button-mini {
   *padding-top: 1px;
   *padding-bottom: 1px;
 }
+.ks-button-group {
+  position: relative;
+  *zoom: 1;
+  *margin-left: .3em;
+}
+.ks-button-group:before,
+.ks-button-group:after {
+  display: table;
+  content: "";
+}
+.ks-button-group:after {
+  clear: both;
+}
+.ks-button-group:first-child {
+  *margin-left: 0;
+}
+.ks-button-group + .ks-button-group {
+  margin-left: 5px;
+}
+.ks-button-toolbar {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+.ks-button-toolbar .ks-button-group {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+}
+.ks-button-group .ks-button {
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.ks-button-group-focused {
+  outline: none;
+}
+.ks-button-group .ks-button:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+.ks-button-group .ks-button:last-child,
+.ks-button-group .dropdown-toggle {
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+}
+.ks-button-group .ks-button.large:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+}
+.ks-button-group .ks-button.large:last-child,
+.ks-button-group .large.dropdown-toggle {
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+}
+.ks-button-group .ks-button:hover,
+.ks-button-group .ks-button:focus,
+.ks-button-group .ks-button:active,
+.ks-button-group .ks-button.active {
+  z-index: 2;
+}
+.ks-button-group .dropdown-toggle:active,
+.ks-button-group.open .dropdown-toggle {
+  outline: 0;
+}
+.ks-button-group .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+.ks-button-group .ks-button-mini.dropdown-toggle {
+  padding-left: 5px;
+  padding-right: 5px;
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+.ks-button-group .ks-button-small.dropdown-toggle {
+  *padding-top: 4px;
+  *padding-bottom: 4px;
+}
+.ks-button-group .ks-button-large.dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.ks-button-group.open {
+  *z-index: 1000;
+}
+.ks-button-group.open .dropdown-menu {
+  display: block;
+  margin-top: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.ks-button-group.open .dropdown-toggle {
+  background-image: none;
+  -webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.ks-button .ks-menu-button-dropdown {
+  margin-top: 7px;
+  margin-left: 0;
+}
+.ks-button:hover .ks-menu-button-dropdown,
+.open.ks-button-group .ks-menu-button-dropdown {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.ks-button-mini .ks-menu-button-dropdown {
+  margin-top: 5px;
+}
+.ks-button-small .ks-menu-button-dropdown {
+  margin-top: 6px;
+}
+.ks-button-large .ks-menu-button-dropdown {
+  margin-top: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000000;
+}
+.ks-button-primary .ks-menu-button-dropdown,
+.ks-button-warning .ks-menu-button-dropdown,
+.ks-button-danger .ks-menu-button-dropdown,
+.ks-button-info .ks-menu-button-dropdown,
+.ks-button-success .ks-menu-button-dropdown,
+.ks-button-inverse .ks-menu-button-dropdown {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
 .dropdown {
   position: relative;
 }
