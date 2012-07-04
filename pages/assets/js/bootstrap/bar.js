@@ -31,7 +31,7 @@ KISSY.add('bootstrap/bar',function(S){
 		CLS_NEXT = 'pb-page-next',
 		CLS_PREV = 'pb-page-prev',
 		CLS_OK = 'pb-page-ok',
-		CLS_PAGGING_BAR = 'pagging-bar',
+		CLS_PAGGING_BAR = 'paging-bar',
 		CLS_BAR_ICON = 'bar-icon',
 		CLS_BUTTON_BAR = 'button-bar';
 
@@ -346,7 +346,7 @@ KISSY.add('bootstrap/bar',function(S){
 	* @param {event} e.to  目标页
 	* @return {Boolean} 如果返回false则，取消翻页
 	*/
-	function paggingBar(config){
+	function pagingBar(config){
 		var _self = this;
 		config = _self._formatConfig(config || {});
 		S.mix(_self, {
@@ -356,11 +356,11 @@ KISSY.add('bootstrap/bar',function(S){
             curPage : 1,    //当前页
             totalPage : 1  //总页数
 		});
-		paggingBar.superclass.constructor.call(_self, config);
+		pagingBar.superclass.constructor.call(_self, config);
 	}
 	
-	S.extend(paggingBar, bar);
-	S.augment(paggingBar,
+	S.extend(pagingBar, bar);
+	S.augment(pagingBar,
 	/** @lends bar.PaggingBar.prototype */	
 	{
 		CLS_BAR : CLS_PAGGING_BAR,
@@ -611,7 +611,7 @@ KISSY.add('bootstrap/bar',function(S){
 	* //独立生成分页栏
 	* new bar.PaggingBar({renderTo:'pbar',store:store,pageSize:20});
 	*/
-	bar.PaggingBar = paggingBar;
+	bar.PaggingBar = pagingBar;
 
 	bar.BarItem = barItem;
 	bar.ButtonBarItem = buttonBarItem;

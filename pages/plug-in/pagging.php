@@ -1,5 +1,5 @@
-<!-- pagging -->
-<section id="pagging">
+<!-- paging -->
+<section id="paging">
   <div class="page-header">
      <h1>分页栏 <small>提供分页/small></h1>
   </div>

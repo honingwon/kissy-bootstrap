@@ -3337,7 +3337,7 @@ a.thumbnail:hover {
 .ks-bar-item {
   display: inline-block;
 }
-.ks-paggingbar {
+.ks-pagingbar {
   font-size: 12px;
   height: 24px;
   background-color: white;
@@ -3346,11 +3346,11 @@ a.thumbnail:hover {
 .ks-bar-item-button {
   margin-left: 2px;
 }
-.ks-paggingbar .ks-button {
+.ks-pagingbar .ks-button {
   height: 18px;
   padding: 2px 8px;
 }
-.ks-paggingbar .ks-pb-page {
+.ks-pagingbar .ks-pb-page {
   color: red;
   font: 11px tahoma, arial, verdana, sans-serif;
   height: 14px;
@@ -3359,7 +3359,7 @@ a.thumbnail:hover {
   width: 25px;
   text-align: center;
 }
-.ks-number-paggingbar .ks-active {
+.ks-pagingbar-number .ks-active {
   border: 1px solid #aaaaaa;
 }
 .ks-bar-item-text {
@@ -3505,7 +3505,7 @@ a.thumbnail:hover {
 .ks-grid-table .ks-grid-row-selected .ks-grid-cell-empty {
   background-color: #e6f2f8;
 }
-.ks-grid .ks-paggingbar {
+.ks-grid .ks-pagingbar {
   float: right;
 }
 .ks-grid-tbar {
